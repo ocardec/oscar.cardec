@@ -29,4 +29,4 @@ Program to open a text file named 'nss1996.txt' give a word count of all the wor
       words = [word.lower() for word in words]  #lowercase words
       
 
-#### Click [HERE](https://github.com/ocardec/ocardec.github.io/blob/main/text_analysis/text_analysis_w_NLTK.ipynb) to read the rest. 
+#### Click [HERE](file:///Users/ocardec/Documents/GitHub/ocardec.github.io/text_analysis/text_analysis_w_NLTK.ipynb) to read the rest. 
