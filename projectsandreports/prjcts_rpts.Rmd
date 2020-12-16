@@ -1,0 +1,39 @@
+---
+title: "Welcome to Oscar's Portfolio!"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+[MIT License
+Copyright (c) 2020 Oscar Cardec](https://github.com/ocardec/ocardec.github.io/font_page/LICENSE)
+
+<br/>
+
+### Projects
+
+- [Cardiotocograms Interpretation and Classification with RStudio CTREE](https://github.com/ocardec/ocardec.github.io/CTREE/docs/index.html)
+
+- [National Security Strategy Text Analysis with NLTK and Tableau Visualizations](https://github.com/ocardec/ocardec.github.io/text_analysis)
+
+<br/>
+
+### Reports
+
+- [Landsat Multispectral Scanner Image's Classification with Kmeans Clustering](https://github.com/ocardec/ocardec.github.io/blob/main/reports/Unsupervised%20Learning%20w%20Kmeans.pdf)
+
+- [Breast Cancer Dataset Classification with RStudio NeuralNet](https://github.com/ocardec/ocardec.github.io/blob/main/reports/Neural%20Networks%20in%20R.pdf)
+
+- [Vehicles Valuation with Multilinear Regression in R](https://github.com/ocardec/ocardec.github.io/blob/main/reports/Multiple%20Linear%20Regression.pdf)
+
+- [Association Rules for Credit Approvals with Apriori](https://github.com/ocardec/ocardec.github.io/blob/main/reports/Association%20w%20Apriori.pdf)
+
+- [Logistic Regresion and Default of Credit Card Payments](https://github.com/ocardec/ocardec.github.io/blob/main/reports/Logistic%20Regression.pdf)
+
+
+
