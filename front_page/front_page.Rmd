@@ -10,13 +10,13 @@ links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/oscarcardec/"
   - label: Projects & Reports
-    url: "file:///Users/ocardec/Documents/GitHub/ocardec.github.io/projectsandreports/prjcts_rpts.html"
+    url: "https://github.com/ocardec/ocardec.github.io/blob/master/projectsandreports/prjcts_rpts.html"
   - label: GitHub
     url: "https://github.com/ocardec"
   - label: Email
     url: "mailto:ocmain@gocardec.com"
   - label: Resume
-    url: "file:///Users/ocardec/Documents/GitHub/ocardec.github.io/front_page/GenResume.pdf"
+    url: "https://github.com/ocardec/ocardec.github.io/blob/master/front_page/GenResume.pdf"
 output:
   postcards::trestles
 ---
