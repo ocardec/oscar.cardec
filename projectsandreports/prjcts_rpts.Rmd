@@ -11,15 +11,15 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 [MIT License
-Copyright (c) 2020 Oscar Cardec](file:///Users/ocardec/Documents/GitHub/ocardec.github.io/font_page/LICENSE)
+Copyright (c) 2020 Oscar Cardec](https://github.com/ocardec/ocardec.github.io/blob/master/front_page/LICENSE)
 
 <br/>
 
 ### Projects
 
-- [Cardiotocograms Interpretation and Classification with RStudio CTREE](file:///Users/ocardec/Documents/GitHub/ocardec.github.io/CTREE/CTREE_RMarkdown.html)
+- [Cardiotocograms Interpretation and Classification with RStudio CTREE](https://github.com/ocardec/ocardec.github.io/blob/master/CTREE/CTREE_RMarkdown.html)
 
-- [National Security Strategy Text Analysis with NLTK and Tableau Visualizations](file:///Users/ocardec/Documents/GitHub/ocardec.github.io/text_analysis/README.html)
+- [National Security Strategy Text Analysis with NLTK and Tableau Visualizations](https://github.com/ocardec/ocardec.github.io/blob/master/text_analysis/README.html)
 
 <br/>
 
