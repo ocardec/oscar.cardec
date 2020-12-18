@@ -33,5 +33,5 @@ Copyright (c) 2020 Oscar Cardec](https://github.com/ocardec/ocardec.github.io/bl
 
 - [Association Rules for Credit Approvals with Apriori](https://github.com/ocardec/ocardec.github.io/blob/master/reports/Association%20w%20Apriori.pdf)
 
-- [Logistic Regresion and Default of Credit Card Payments](https://github.com/ocardec/ocardec.github.io/blob/master/reports/Logistic%20Regression.pdf)
+- [Logistic Regresion and Default of Credit Card Payments](https://github.com/ocardec/ocardec.github.io/blob/master/reports/Logistic%20Regression.pdf) 
 
