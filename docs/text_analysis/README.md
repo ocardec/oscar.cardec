@@ -16,6 +16,7 @@ For this example, I've selected the U.S. National Security Strategy for the year
 
 **Note:** Starter Code - Based on Toby Donaldson's Python: Visual QuickStart Guide function print_file_stats (location 5347). Modified by OC on 7 Jul 2020
 Program to open a text file named 'nss1996.txt' give a word count of all the words in the file and give the top 30 words. Note: This code assumes the following have been imported:
+
 - import string
 - import nltk
 - nltk.download('stopwords')
@@ -29,4 +30,4 @@ Program to open a text file named 'nss1996.txt' give a word count of all the wor
       words = [word.lower() for word in words]  #lowercase words
       
 
-#### Click [HERE](file:///Users/ocardec/Documents/GitHub/ocardec.github.io/text_analysis/text_analysis_w_NLTK.ipynb) to read the rest. 
+#### Click [HERE](text_analysis_w_NLTK.ipynb) to read the rest. 
