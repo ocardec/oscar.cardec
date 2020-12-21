@@ -1,0 +1,57 @@
+---
+title: "Oscar Cardec"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+image: "myphoto.png"
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/oscarcardec/"
+  - label: Projects & Reports
+    url: "prjcts_rpts.html"
+  - label: GitHub
+    url: "https://github.com/ocardec"
+  - label: Email
+    url: "mailto:ocmain@gocardec.com"
+  - label: Resume
+    url: "GenResume.pdf"
+output:
+  postcards::trestles
+---
+ 
+## Bio
+
+I'm a data analyst, self-taught programmer, and machine learning enthusiast; embracing complexity and extracting insight from new data is my craving. I believe in Servant Leadership, in a commitment to serve others. Just like A. Einstein once said, I believe that "once you stop learning, you start dying".
+
+<br/>
+
+## Education
+
+**University of Maryland** | Adelphi, MD
+
+M.S. in Data Analytics | Nov 2019 - Nov 2021
+
+**American Military University** | Charles Town, WV
+
+B.S. in Information Technology Management | Jan 2012 - Nov 2016
+
+**Community College of the Air Force** | Maxwell AFB, AL
+
+A.S. in Intelligence Studies & Technology | Mar 2013 - Apr 2014
+
+<br/>
+
+## Experience
+
+**Accenture Federal Services** | Data Science Intern | Oct 2020 - Jan 2021
+
+**United States Air Force** | Intelligence Analyst | Oct 2013 - Sep 2020
+
+**United States Air Force** | Information & Database Administrator | Mar 2007 - Sep 2013
+
+**United States Air Force** | Aerospace Maintenance Craftman | Dec 2000 - Feb 2007
+
+
+
