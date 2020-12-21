@@ -11,7 +11,7 @@
 
 
 
-<title>Welcome to Oscar’s Portfolio!</title>
+<title>README.utf8</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -422,32 +422,38 @@ summary {
 
 
 
-<h1 class="title toc-ignore">Welcome to Oscar’s Portfolio!</h1>
 
 </div>
 
 
-<div class="green">
-<p><a href="LICENSE.txt">MIT License Copyright (c) 2020 Oscar Cardec</a></p>
-</div>
-<p><br /></p>
-<div id="projects" class="section level3">
-<h3>Projects</h3>
+<div id="text-analysis-with-nltk-and-tableau-visualizations" class="section level2">
+<h2>Text Analysis with NLTK and Tableau Visualizations</h2>
+<p>As a Data Analyst, BI Analyst, Data Miner, ML Engineer, etc. text analysis could result in one of the handiest tools of your toolbox. In simple words, text analysis is about parsing a string or text file with the objective of extracting key characteristics, facts, or trends from within the context.</p>
+<blockquote>
+<p>“Using Text Analysis is one of the first steps in many data-driven approaches, as the process extracts machine-readable facts from large bodies of texts and allows these facts to be further entered automatically into a database or a spreadsheet. The database or the spreadsheet are then used to analyze the data for trends, to give a natural language summary, or may be used for indexing purposes in Information Retrieval applications” - ontotext.com</p>
+</blockquote>
+<p><strong>Example:</strong> <em>Given unstructured text data, process the data, and create valuable business analytics. Create a managerial report identifying the patterns and recommendations uncovered in the data.</em></p>
+<p>You want to choose readily available text which recurred over at least three time periods, spaced some distance apart. You want to make sure you have at least several thousand words of text for each time period, and you want something which will change noticeably over that time period. For this example, I’ve selected the U.S. National Security Strategy for the years of 1996, 2002, and 2017.</p>
+<blockquote>
+<p>Text analysis is about parsing a string or text file with the objective of extracting characteristics, facts, or trends from the context.</p>
+</blockquote>
+<p><strong>1st Step:</strong> Open the text file (ie., nss1996.txt), create basic counters, and dictionary, split the lines as words, and lowercase all contained words.</p>
+<p><strong>Note:</strong> Starter Code - Based on Toby Donaldson’s Python: Visual QuickStart Guide function print_file_stats (location 5347). Modified by OC on 7 Jul 2020 Program to open a text file named ‘nss1996.txt’ give a word count of all the words in the file and give the top 30 words. Note: This code assumes the following have been imported:</p>
 <ul>
-<li><h4 id="cardiotocograms-interpretation-and-classification-with-rstudio-ctree"><a href="CTREE/CTREE_RMarkdown.html">Cardiotocograms Interpretation and Classification with RStudio CTREE</a></h4></li>
-<li><h4 id="national-security-strategy-text-analysis-with-nltk-and-tableau-visualizations"><a href="text_analysis/README.html">National Security Strategy Text Analysis with NLTK and Tableau Visualizations</a></h4></li>
+<li><p>import string</p></li>
+<li><p>import nltk</p></li>
+<li><p>nltk.download(‘stopwords’)</p></li>
+<li><p>from nltk.corpus import stopwords</p>
+<pre><code>fhand = open(&#39;nss1996.txt&#39;, &#39;r&#39;).read()   #open the file
+num_chars = len(fhand)                    #count characters 
+num_lines = fhand.count(&#39;\n&#39;)             #count lines
+d = dict()                                #create a list
+words = fhand.split()                     #split lines
+words = [word.lower() for word in words]  #lowercase words</code></pre></li>
 </ul>
-<p><br /></p>
+<div id="click-here-to-read-the-rest." class="section level4">
+<h4>Click <a href="text_analysis_w_NLTK.ipynb">HERE</a> to read the rest.</h4>
 </div>
-<div id="reports" class="section level3">
-<h3>Reports</h3>
-<ul>
-<li><h4 id="landsat-multispectral-scanner-images-classification-with-kmeans-clustering"><a href="reports/Unsupervised%20Learning%20w%20Kmeans.pdf">Landsat Multispectral Scanner Image’s Classification with Kmeans Clustering</a></h4></li>
-<li><h4 id="breast-cancer-dataset-classification-with-rstudio-neuralnet"><a href="reports/Neural%20Networks%20in%20R.pdf">Breast Cancer Dataset Classification with RStudio NeuralNet</a></h4></li>
-<li><h4 id="vehicles-valuation-with-multilinear-regression-in-r"><a href="reports/Multiple%20Linear%20Regression.pdf">Vehicles Valuation with Multilinear Regression in R</a></h4></li>
-<li><h4 id="association-rules-for-credit-approvals-with-apriori"><a href="reports/Association%20w%20Apriori.pdf">Association Rules for Credit Approvals with Apriori</a></h4></li>
-<li><h4 id="logistic-regresion-and-default-of-credit-card-payments"><a href="reports/Logistic%20Regression.pdf">Logistic Regresion and Default of Credit Card Payments</a></h4></li>
-</ul>
 </div>
 
 

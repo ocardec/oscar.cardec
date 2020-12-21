@@ -1,10 +1,5 @@
 ---
 title: "Cardiotocograms Classification with CTREE in RStudio"
-knit: (function(input_file, encoding) {
-  out_dir <- 'docs';
-  rmarkdown::render(input_file,
- encoding=encoding,
- output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 author: "by O.Cardec"
 date: "10/01/2020"
 output:
@@ -49,13 +44,15 @@ ctg<-read.csv(file="cardiotocography.csv", head=TRUE, sep=",", as.is=FALSE)
 
 ### Preface   
 
-Cardiotocograms, also known as CTGs, have been instrumental within clinical medicine for a long time. Obstetricians use these measurements and classifications to obtain detailed information and intelligence about newborns and their mothers prior to and during labor. In 2018, an article presented through the Journal of Clinical Medicine detailed the practicality of CTGs. The same noted that interpretations of these censorial readings are mainly attributed to the observer; which creates challenges of consistency of interpretations and defies the human naked eye. Questions like what happens, if or when, the interpreter misses a key detail? Furthermore, what time-sensitive conditions may the measurements uncover, requiring immediate actions are few examples of concerns posed by the continuous practice of merely optical assessments of a CTG [5](file:///Users/ocardec/Documents/GitHub/ocardec.github.io/CTREE/References.html).     
+Cardiotocograms, also known as CTGs, have been instrumental within clinical medicine for a long time. Obstetricians use these measurements and classifications to obtain detailed information and intelligence about newborns and their mothers prior to and during labor. In 2018, an article presented through the Journal of Clinical Medicine detailed the practicality of CTGs. The same noted that interpretations of these censorial readings are mainly attributed to the observer; which creates challenges of consistency of interpretations and defies the human naked eye. Questions like what happens, if or when, the interpreter misses a key detail? Furthermore, what time-sensitive conditions may the measurements uncover, requiring immediate actions are few examples of concerns posed by the continuous practice of merely optical assessments of a CTG [^5](References.html).     
 
-The following report presents an assessment of CTGs using the conditional inference tree (ctree) model within RStudio. The same shows how the algorithm expedites and enhances the interpretation of CTG readings while appraising multiple fetal readings simultaneously. Moreover, the study aims to identify potentially hidden patterns that may require further attention.  
+The following report presents an assessment of CTGs using the conditional inference tree (ctree) model within RStudio. The same shows how the algorithm expedites and enhances the interpretation of CTG readings while appraising multiple fetal readings simultaneously. Moreover, the study aims to identify potentially hidden patterns that may require further attention. 
+
+<br/>
 
 ### Collection 
 
-The data-frame to be analyzed comes from the UCI Machine Learning Repository, and it consists of measurements of fetal heart rate (FHR) and uterine contraction (UC) as identified and recorded by cardiotocograms. It contains 2126 observations and 23 variables. Each diagnostic attribute within these CTGs was automatically processed and measured. Finally, for supervised learning purposes, all CTGs were classified by three subject matter experts, and under unanimity, assigned them with response-labels based on the fetal state and/or morphological detected patterns [3](file:///Users/ocardec/Documents/GitHub/ocardec.github.io/CTREE/References.html).
+The data-frame to be analyzed comes from the UCI Machine Learning Repository, and it consists of measurements of fetal heart rate (FHR) and uterine contraction (UC) as identified and recorded by cardiotocograms. It contains 2126 observations and 23 variables. Each diagnostic attribute within these CTGs was automatically processed and measured. Finally, for supervised learning purposes, all CTGs were classified by three subject matter experts, and under unanimity, assigned them with response-labels based on the fetal state and/or morphological detected patterns [3](References.html).
 
 ##### Data Dictionary
 
@@ -84,6 +81,8 @@ The data-frame to be analyzed comes from the UCI Machine Learning Repository, an
 - NSP - Fetal state class code (N = Normal; S = Suspect; P = Pathologic)
 
 As observed, the above list includes unique CTG measurements, statistical attributes as well as observations from some of the recorded variables.  The last two variables, CLASS and NSP, represent the previously mentioned classification and response-labeling conducted by the obstetricians.    
+
+<br/>
 
 ### Exploratory Analysis
 
@@ -173,7 +172,7 @@ valx
 
 <br/>
 
-Considering the findings through the EDA process, and explanatory details from the data source, the variables that were not part of the original collection were excluded. After further inquiry, these characteristics and calculations were related to the FHR baseline histogram made by the analytical software used by the dataset originators [5](file:///Users/ocardec/Documents/GitHub/ocardec.github.io/CTREE/References.html). Initially, the CLASS variable was converted to a factor and all of its 10 levels renamed. Unfortunately, this variable also resulted to be a classification conducted by the medical practitioners, and contributed to the over-fitting of the model, thus forcing to reassess the development approach. That said, the CLASS variable was used as a guide for interpretation, but not included on the final set of variables to test within the model. Besides, the NSP variable was transformed into a factor, and its levels were renamed to normal, suspect, and pathologic. Figure 1.4 gives a brief look of some of the variables and their respective distribution characteristics. 
+Considering the findings through the EDA process, and explanatory details from the data source, the variables that were not part of the original collection were excluded. After further inquiry, these characteristics and calculations were related to the FHR baseline histogram made by the analytical software used by the dataset originators [5](References.html). Initially, the CLASS variable was converted to a factor and all of its 10 levels renamed. Unfortunately, this variable also resulted to be a classification conducted by the medical practitioners, and contributed to the over-fitting of the model, thus forcing to reassess the development approach. That said, the CLASS variable was used as a guide for interpretation, but not included on the final set of variables to test within the model. Besides, the NSP variable was transformed into a factor, and its levels were renamed to normal, suspect, and pathologic. Figure 1.4 gives a brief look of some of the variables and their respective distribution characteristics. 
 
 ```{r pre-processing, include=FALSE, echo=TRUE}
 # b. Exclude non-original measurements, rename targeted values
@@ -198,12 +197,13 @@ ctg[,1:12] %>%
 ```
 _Figure 1.4 – Dataset transformed._
 
-Click [HERE](file:///Users/ocardec/Documents/GitHub/ocardec.github.io/CTREE/final_distributions.png) for an amplified view of Figure 1.4
+Click [HERE](final_distributions.png) for an amplified view of Figure 1.4
+
+<br/>
 
 ### Algorithm Intuition
 
-As previously stated, the conditional inference tree (ctree) algorithm is used for this dataset classification. The objective is to use the model for the identification of those independent variables with the greatest influence against the response variable.  Author, Torsten Hothorn, summarizes the algorithm behind the ctree as follow: “A conditional inference trees estimate a regression relationship by binary recursive partitioning in a conditional inference framework [4](file:///Users/ocardec/Documents/GitHub/ocardec.github.io/CTREE/References.html). Hothorn explains that first “the algorithm tests the sample for a hypothesis of independence between the independent variables and the response”.  If the hypothesis cannot be rejected the process stops. Conversely, it selects the variable with the strongest measured association (measured by the corresponding p-value). Secondly, it implements a binary decision and split in the selected variable, and recursively continues this process until all observations get evaluated [4](file:///Users/ocardec/Documents/GitHub/ocardec.github.io/CTREE/References.html). 
-
+As previously stated, the conditional inference tree (ctree) algorithm is used for this dataset classification. The objective is to use the model for the identification of those independent variables with the greatest influence against the response variable.  Author, Torsten Hothorn, summarizes the algorithm behind the ctree as follow: “A conditional inference trees estimate a regression relationship by binary recursive partitioning in a conditional inference framework [4](References.html). Hothorn explains that first “the algorithm tests the sample for a hypothesis of independence between the independent variables and the response”.  If the hypothesis cannot be rejected the process stops. Conversely, it selects the variable with the strongest measured association (measured by the corresponding p-value). Secondly, it implements a binary decision and split in the selected variable, and recursively continues this process until all observations get evaluated [4](References.html).
 The first step in developing the model was setting a seed (to replicate the results) and splitting the dataset into different samples to train and test the model. After numerous evaluations, comparison of different simulations, and accuracy appraisals, the data splitting proportions were set to 0.70 and 0.30, for the training and testing subsets, respectively. 
 
 ```{r split, include=TRUE, echo=TRUE}
@@ -243,7 +243,7 @@ plot(model, type="extended", ep_args = list(justmin=9), drop_terminal=FALSE, tne
 
 _Figure 1.5 - Structure of training dataset model._ 
 
-Click [HERE](file:///Users/ocardec/Documents/GitHub/ocardec.github.io/CTREE/trainingmodel.png) for an amplified view of Figure 1.5.
+Click [HERE](trainingmodel.png) for an amplified view of Figure 1.5.
 
 <br/>
 
@@ -259,6 +259,7 @@ prop.table(table(predict(model), train.data$NSP, dnn=c("PREDICTED", "ACTUAL")))
 
 _Figure 1.6 – Training model confusion matrix._
 
+<br/>
 
 ### Output
 
@@ -283,7 +284,7 @@ plot(model2, ep_args = list(justmin=9), type="extended", drop_terminal = FALSE, 
 
 _Figure 1.8 – Test data conditional inference tree._ 
 
-Click [HERE](file:///Users/ocardec/Documents/GitHub/ocardec.github.io/CTREE/testdata.png) for an amplified view of Figure 1.8.
+Click [HERE](testdata.png) for an amplified view of Figure 1.8.
 
 <br/>
 
@@ -297,14 +298,15 @@ confusionMatrix(testPred2, test.data$NSP)
 
 _Figure 1.9 – Test data sample confusion matrix._
 
+<br/>
 
 ### Conclusion 
 
 Based on the above model’s descriptions, and inferred findings, one may argue and advocate for the use of supervised learning algorithms, like the ctree. This can definitely serve as supporting mechanisms through the medical industry, especially, as evaluated here neonatal, or labor and delivery medical departments. Per the described intended goals, this study employed the ctree methodology to assess and classified independent variables and their influence toward the response variable of NSP. As previously alluded, the model enhances uncovering inclinations, branches, or tree nodes not typically perceivable by the human naked-eye, thus discourages the practice of CTG interpretation solely based on the medical practitioner experience. Although this is a basic assessment of the usability of the ctree algorithm, supplemented with other data mining techniques including, but not limited to, clustering, classification, and dimensionality reduction, could boost the performance accuracy of the model while reducing error variances. Some encountered challenges while conducting the study were related to identifying the best transformation techniques or interpretation of the data, given the limited background of the medical domain. As a recommendation, any future development of this algorithm in relation to CTGs would highly benefit from having sustainable knowledge within this medical area. For best accuracy outcomes, better transformation techniques and variables selection process is advised 
 
-<br/>
+<br/><br/><br/>
 
-<br/>
+
 
 
 **Disclaimer:** The views expressed in this analysis are those of the author, for educational purposes, and do not reflect an official interpretation or position of the entities herein mentioned. 
