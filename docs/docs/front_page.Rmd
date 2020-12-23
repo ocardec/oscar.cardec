@@ -10,7 +10,7 @@ links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/oscarcardec/"
   - label: Projects & Reports
-    url: "prjcts_rpts.html"
+    url: "http://ocardec.github.io/docs/prjcts_rpts.html"
   - label: GitHub
     url: "https://github.com/ocardec"
   - label: Email
