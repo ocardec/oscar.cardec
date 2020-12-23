@@ -4,19 +4,19 @@ knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
  encoding=encoding,
- output_file=file.path(dirname(input_file), out_dir, 'index1.html'))})
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 image: "myphoto.png"
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/oscarcardec/"
   - label: Projects & Reports
-    url: "ocardec.github.io/docs/docs/index2.html"
+    url: "file:///Users/ocardec/Documents/GitHub/ocardec.github.io/docs/prjcts_rpts.html"
   - label: GitHub
     url: "https://github.com/ocardec"
   - label: Email
     url: "mailto:ocmain@gocardec.com"
   - label: Resume
-    url: "GenResume.pdf"
+    url: "file:///Users/ocardec/Documents/GitHub/ocardec.github.io/docs/GenResume.pdf"
 output:
   postcards::trestles
 ---
