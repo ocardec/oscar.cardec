@@ -1,0 +1,63 @@
+---
+title: "Oscar Cardec"
+image: "docs/MyPortrait.jpg"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+links:
+  - label: Merit Page
+    url: "https://meritpages.com/ocardec"
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/oscarcardec/"
+  - label: Projects & Reports
+    url: "index2.html"
+  - label: GitHub
+    url: "https://github.com/ocardec"
+  - label: Email
+    url: "mailto:ocmain@gocardec.com"
+  - label: Resume
+    url: "docs/OscarCardec-Resumev2.pdf"
+output:
+  postcards::trestles
+---
+ 
+## Bio
+
+Lead Data Scientist, United States Air Force Veteran and Cyber Intelligence Analyst with an active security clearance and over 20+ years of proven experience directing personnel and resource management, adhering to, and enforcing standards and regulations, and balancing multiple projects while still maintaining a focus on providing quality results.  Possess a comprehensive background knowledge in machine learning and predictive analytics, intelligence analysis, strategic planning and management, and cyber intelligence operations derived from steering domestic and global operations.
+
+<br/>
+
+## Education
+
+**University of Maryland Global Campus** | Adelphi, MD
+
+MS in Data Analytics
+
+**American Military University** | Charles Town, WV
+
+BS in Information Technology Management
+
+**Community College of the Air Force** | Maxwell AFB, AL
+
+AS in Intelligence Studies & Technology
+
+<br/>
+
+## Experience
+
+**GovCIO** | Data Scientist - ML Specialist | 2023 - Present
+
+**Deloitte & Touche, LLC** | Lead Data Scientist | 2021 - 2023
+
+**Accenture Federal Services** | Data Science Intern | 2020 - 2021
+
+**United States Air Force** | Intelligence Analyst | 2013 - 2020
+
+**United States Air Force** | Information & Database Administrator | 2007 - 2013
+
+**United States Air Force** | Aerospace Maintenance Craftman | 2000 - 2007
+
+
+
