@@ -31,12 +31,11 @@ output:
 <br/>
 
 #### Bio  
-
 > Lead Data Scientist, United States Air Force Veteran and Cyber Intelligence Analyst with an active security clearance and over 20+ years of proven experience managing operations, personnel, and resources, adhering to, and enforcing standards and regulations, and balancing multiple projects while still maintaining a focus on providing quality results. Possess a comprehensive background knowledge in machine learning and predictive analytics, intelligence analysis, management, strategic planning, and cyber intelligence operations derived from steering domestic and global operations in support of the Department of Defense and the Intelligence Community.  
 
 <br/>
 
-#### Education
+#### Education  
 University of Maryland \| Adelphi, MD - MS in Data Analytic  
 American Military University \| Charles Town, WV - BS in I.T. Management  
 C.C. of the Air Force \| Maxwell AFB, AL - AS in Intelligence Studies & Technology  
