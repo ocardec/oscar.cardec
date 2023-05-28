@@ -10,19 +10,18 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-<div class="green"> [MIT License
-Copyright (c) 2023 Cardec Solutions](docs/"LICENSE.txt")
-</div>
+[MIT License Copyright (c) 2023 Cardec Solutions]("docs/LICENSE.txt")
+
 
 <br/>
 
 ### Projects
 
-- #### [Cardiotocograms Interpretation and Classification with RStudio CTREE](CTREE/CTREE_RMarkdown.html)
+- #### [Cardiotocograms Interpretation and Classification with RStudio CTREE]("CTREE/CTREE_RMarkdown.html")
 
-- #### [Classification of Aircraft's Lateral Deviation](reports/ClassificationACFTLateralDeviation.pdf)
+- #### [Classification of Aircraft's Lateral Deviation]("reports/ClassificationACFTLateralDeviation.pdf")
 
-- #### [National Security Strategy Text Analysis with NLTK and Tableau Visualizations](text_analysis/README.html)
+- #### [National Security Strategy Text Analysis with NLTK and Tableau Visualizations]("text_analysis/README.html")
 
 <br/>
 
