@@ -11,7 +11,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 <div class="green"> [MIT License
-Copyright (c) 2020 Oscar Cardec](docs/"LICENSE.txt")
+Copyright (c) 2023 Cardec Solutions](docs/"LICENSE.txt")
 </div>
 
 <br/>
@@ -20,13 +20,13 @@ Copyright (c) 2020 Oscar Cardec](docs/"LICENSE.txt")
 
 - #### [Cardiotocograms Interpretation and Classification with RStudio CTREE](CTREE/CTREE_RMarkdown.html)
 
+- #### [Classification of Aircraft's Lateral Deviation](reports/ClassificationACFTLateralDeviation.pdf)
+
 - #### [National Security Strategy Text Analysis with NLTK and Tableau Visualizations](text_analysis/README.html)
 
 <br/>
 
 ### Reports
-
-- #### [Classification of Aircraft's Lateral Deviation](reports/ClassificationACFTLateralDeviation.pdf)
   
 - #### [Landsat Multispectral Scanner Image's Classification with Kmeans Clustering](reports/Unsupervised%20Learning%20w%20Kmeans.pdf)
 
