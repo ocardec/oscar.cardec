@@ -1,0 +1,314 @@
+---
+title: "Cardiotocograms Classification with CTREE in RStudio"
+author: "by O.Cardec"
+date: "10/01/2020"
+output:
+  html_document:
+    df_print: default
+    fig_caption: yes
+    fig_height: 7
+    fig_width: 9
+    highlight: espresso
+    theme: sandstone
+    toc: yes
+  pdf_document: default
+  html_notebook: 
+    number_sections: yes
+height: 1800
+width: 2800
+editor_options: 
+  chunk_output_type: console
+--- 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(include = FALSE)
+```
+
+```{r requirements, include=FALSE}
+# Required packages
+library("tidyverse")
+library("ggplot2")
+library("party")
+library("partykit")
+#install.packages("hrbrthemes")
+#library("hrbrthemes")
+library("caret")
+#Load csv and assess
+#setwd("~Documents/GitHub/ocardec.github.io/CTREE")
+ctg<-read.csv(file="cardiotocography.csv", head=TRUE, sep=",", as.is=FALSE)
+#str(ctg)      #Content
+#summary(ctg)  #Stats
+# head(ctg, 10)
+# summary(ctg$LB)
+# summary(ctg$NSP)
+```
+
+### Preface   
+
+Cardiotocograms, also known as CTGs, have been instrumental within clinical medicine for a long time. Obstetricians use these measurements and classifications to obtain detailed information and intelligence about newborns and their mothers prior to and during labor. In 2018, an article presented through the Journal of Clinical Medicine detailed the practicality of CTGs. The same noted that interpretations of these censorial readings are mainly attributed to the observer; which creates challenges of consistency of interpretations and defies the human naked eye. Questions like what happens, if or when, the interpreter misses a key detail? Furthermore, what time-sensitive conditions may the measurements uncover, requiring immediate actions are few examples of concerns posed by the continuous practice of merely optical assessments of a CTG [^5](References.html).     
+
+The following report presents an assessment of CTGs using the conditional inference tree (ctree) model within RStudio. The same shows how the algorithm expedites and enhances the interpretation of CTG readings while appraising multiple fetal readings simultaneously. Moreover, the study aims to identify potentially hidden patterns that may require further attention. 
+
+<br/>
+
+### Collection 
+
+The data-frame to be analyzed comes from the UCI Machine Learning Repository, and it consists of measurements of fetal heart rate (FHR) and uterine contraction (UC) as identified and recorded by cardiotocograms. It contains 2126 observations and 23 variables. Each diagnostic attribute within these CTGs was automatically processed and measured. Finally, for supervised learning purposes, all CTGs were classified by three subject matter experts, and under unanimity, assigned them with response-labels based on the fetal state and/or morphological detected patterns [3](References.html).
+
+##### Data Dictionary
+
+- LB: FHR baseline (beats per minute)                               
+- AC: Number of accelerations per second 
+- FM: Number of fetal movements per second 
+- UC: Number of uterine contractions per second 
+- DL: Number of light decelerations per second 
+- DS: Number of severe decelerations per second 
+- DP: Number of prolonged decelerations per second 
+- ASTV: Percentage of time with abnormal short-term variability 
+- MSTV: Mean value of short term variability 
+- ALTV: Percentage of time with abnormal long-term variability 
+- MLTV: Mean value of long -erm variability 
+- Width: Width of FHR histogram 
+- Min: Minimum of FHR histogram 
+- Max: Maximum of FHR histogram 
+- Nmax: Number of histogram peaks 
+- Nzeros: Number of histogram zeros 
+- Mode: Histogram mode 
+- Mean - Histogram mean 
+- Median - Histogram median 
+- Variance - Histogram variance 
+- Tendency - Histogram tendency 
+- CLASS - FHR pattern class code (1 to 10) 
+- NSP - Fetal state class code (N = Normal; S = Suspect; P = Pathologic)
+
+As observed, the above list includes unique CTG measurements, statistical attributes as well as observations from some of the recorded variables.  The last two variables, CLASS and NSP, represent the previously mentioned classification and response-labeling conducted by the obstetricians.    
+
+<br/>
+
+### Exploratory Analysis
+
+The given cardiotocography.csv file was loaded and vectored as ctg. A look into the structure of the data-frame confirms some of the variables and information obtained from the repository and .csv file itself. The 2126 observations are a mix of formatted integers and numeric values. A glimpse over these represented values highlights few transformation options. Case in point, the targeted variable, which is the NSP, will need to get converted to a factor. Other variables like FM, DP, or ALTV may be representative of asymmetrical distributions. Furthermore, a variable like DS appears to have only one type of response, making it incomparable for classification purposes.  
+
+```{r summary, include=TRUE, echo=FALSE}
+# list1 <- ctg[c("AC", "ALTV", "ASTV", "DL", "DP", "DS", "FM", "LB", "MLTV", "MSTV", "NSP", "UC")]
+# summary(list1)
+summary(ctg)
+```
+
+_Figure 1.1 – NSP, as the response variable, will be converted to a factor_ 
+
+<br/>
+
+The above illustration expands and corroborates other aspects within the data. Case in point, judging by the numbers, Width, Min, Max, Nmax, Nzeros, Mode, Mean, Median, Variance, and Tendency appear to be statistical results of a measurement. Also, the variance across distributions is evident, thus, extra steps will have to be taken during the pre-processing phase. Lastly, there are no NA values within the set.  
+
+After reviewing the statistical attributes of the data set, a histogram was built to represent the LB variable.  Per the data dictionary, this particular attribute is the most influential attribute of the set. The image in figure 1.2 shows how equally distributed the LB attribute is, and by the featured frequency, the mean will most likely fall between 130-135 heart-beats per minute.  
+
+```{r LBdhist, include = TRUE, echo = FALSE, fig.height=7, fig.width=9}
+par(mfrow = c(1,1))
+hist((ctg$LB), main="Fetal Heart Rate Baseline", breaks = 21, lwd=.01,
+     xlab="(Beats per Minute)", border="dark green", col="light grey", labels = TRUE)
+```
+
+_Figure 1.2 – Fetal heart hate baseline (LB variable) is fairly distributed._ 
+
+<br/>
+
+Motivated by the variability of the baseline distribution, a deeper look was taken to identify out of the represented observations which ones were outside the 2-Standard Deviation (S.D.) ranges.  Figure 1.3, portrays what the developed code captured. It shows the values associated with the S.D.s’ boundaries, and how some of the readings exceed such boundaries.
+
+```{r stats-var, include=FALSE, echo=FALSE}
+# LB stats
+t.test(ctg$LB)
+m<-mean(ctg$LB)
+std<-sd(ctg$LB)
+upr=m+std
+lwr=m-std
+lbdf <- data.frame(ctg,my_x = 0 + rnorm(length(ctg$LB),
+        mean=m, sd=std),my_y = 0 + rnorm(length(ctg$LB), mean=m, sd=std))
+```
+
+```{r LBvar, include=FALSE, echo=FALSE, fig.width=9}
+# LB Variation
+par(mfrow = c(1,1))
+print(pltlb <- ggplot(lbdf, xlab=TRUE, aes(x=(my_x), y=my_y)) + 
+        geom_line(col="grey51", linemitre=1) +
+        geom_smooth(method=lm, color="green", lty=1, fill="lightblue", se=TRUE) + theme_minimal () +
+        labs(x=NULL, y="BPM", title="FHR LB Variations in Relation to the Mean"))
+```
+  
+```{r LB distro boundaries, include=TRUE, echo=FALSE, fig.height=7, fig.width=9}
+# 2-standard deviations?
+upr2=m+(std*2)
+lwr2=m-(std*2)
+
+# Plot
+par(mfrow = c(1,1))
+plot.new()
+plot(ctg$LB, type="l", col="darkgreen", ylab="Fetal Heart Rate Baseline", main="Standard Deviations' Range")
+abline(h = m, col = "darkred")
+abline(h = upr, col = "lightblue", lty=2)
+abline(h = lwr, col = "lightblue", lty=2)
+abline(h = upr2, col = "red", lty=2)
+abline(h = lwr2, col = "red", lty=2)
+text(-65,134, "mean:133.30", col = "blue", adj = c(0, -.1))
+text(-65,upr, round(upr, 2), col = "blue", adj = c(0, -.1))
+text(-65,lwr, round(lwr, 2), col = "blue", adj = c(0, -.1))
+text(-65,upr2, round(upr2, 2), col = "blue", adj = c(0, -.1))
+text(-65,lwr2, round(lwr2, 2), col = "blue", adj = c(0, -.1))
+```
+
+_Figure 1.3 – Graphical display of LB’s 1 & 2 Standard Deviations._ 
+
+<br/>
+
+After further calculation, like the one below, shows how critical this reading resulted, given that those readings within 2-S.D. account for over 96% of the studied observations. That said, this does not imply the contained readings are one way or the other (Normal, Suspect, or Pathologic), but instead shows the usability of these quantified observations.
+
+```{r sdvs, include=TRUE, echo=TRUE}
+lba <- (sum(ctg$LB > 152.99)) # LB Observations higher than 2-s.d. # 39
+lbb <- (sum(ctg$LB < 113.62)) # LB Observations lower than 2-s.d. # 44
+lba + lbb  # 83 obs outside of the 2-s.d. boundaries
+rate_in <- sum(between(ctg$LB, 113.62, 152.99)/nrow(ctg)) # of obs within 2-s.d.
+valx <- (sum(round(rate_in * 100, 2)))
+valx
+```
+
+<br/>
+
+Considering the findings through the EDA process, and explanatory details from the data source, the variables that were not part of the original collection were excluded. After further inquiry, these characteristics and calculations were related to the FHR baseline histogram made by the analytical software used by the dataset originators [5](References.html). Initially, the CLASS variable was converted to a factor and all of its 10 levels renamed. Unfortunately, this variable also resulted to be a classification conducted by the medical practitioners, and contributed to the over-fitting of the model, thus forcing to reassess the development approach. That said, the CLASS variable was used as a guide for interpretation, but not included on the final set of variables to test within the model. Besides, the NSP variable was transformed into a factor, and its levels were renamed to normal, suspect, and pathologic. Figure 1.4 gives a brief look of some of the variables and their respective distribution characteristics. 
+
+```{r pre-processing, include=FALSE, echo=TRUE}
+# b. Exclude non-original measurements, rename targeted values
+ctg[12:22] <- NULL
+ctg$NSP<-as.numeric(ctg$NSP)
+ctg$NSP<-factor(ctg$NSP, levels= 1:3, labels = c("Normal","Suspect", "Pathologic"))
+# ctg$CLASS<-as.numeric(ctg$CLASS)
+# ctg$CLASS<-factor(ctg$CLASS, levels=1:10, labels= c('A', 'B', 'C', 'D', 'SH', 'AD', 'DE', 'LD', 'FS', 'SP'))
+```
+
+```{r dismatrix, include=TRUE, echo=TRUE, fig.width=12}
+
+# Distributions preview
+ctg[,1:12] %>% 
+  gather() %>%                             
+  ggplot(aes(value)) +
+  theme_light() + labs(title = "FHR Measurement Distributions") +
+  theme(axis.text.x = element_text(angle=90)) +                 
+  facet_wrap(~ key, scales = "free", shrink = TRUE) +  
+  geom_bar(mapping = aes(value), 
+           color = "darkblue", fill = "lightgrey")
+```
+_Figure 1.4 – Dataset transformed._
+
+Click [HERE](final_distributions.png) for an amplified view of Figure 1.4
+
+<br/>
+
+### Algorithm Intuition
+
+As previously stated, the conditional inference tree (ctree) algorithm is used for this dataset classification. The objective is to use the model for the identification of those independent variables with the greatest influence against the response variable.  Author, Torsten Hothorn, summarizes the algorithm behind the ctree as follow: “A conditional inference trees estimate a regression relationship by binary recursive partitioning in a conditional inference framework [4](References.html). Hothorn explains that first “the algorithm tests the sample for a hypothesis of independence between the independent variables and the response”.  If the hypothesis cannot be rejected the process stops. Conversely, it selects the variable with the strongest measured association (measured by the corresponding p-value). Secondly, it implements a binary decision and split in the selected variable, and recursively continues this process until all observations get evaluated [4](References.html).
+The first step in developing the model was setting a seed (to replicate the results) and splitting the dataset into different samples to train and test the model. After numerous evaluations, comparison of different simulations, and accuracy appraisals, the data splitting proportions were set to 0.70 and 0.30, for the training and testing subsets, respectively. 
+
+```{r split, include=TRUE, echo=TRUE}
+# Creating the training and testing data subsets
+set.seed(1234)
+ind <- sample(2, nrow(ctg), replace = TRUE, prob = c(0.70, 0.30))
+train.data <- ctg[ind == 1, ]
+test.data <- ctg[ind == 2, ]
+
+# Runing the method against the train data subset
+myFormula <- NSP~.
+model <- ctree(myFormula, data = train.data)
+print(model)
+```
+_Figure 1.4.1 - Structure of the train data model._
+
+<br/>
+
+Per the illustration, the model consists of 25 inner nodes and 26 terminal nodes for a total of 51 nodes. The first split or branching to the right occurs at the root where driven by DP “prolonged deceleration” > 0.001, it groups 149 observations, with a majority of pathologic cases distributed through nodes 47, 48, & 49. To the left of the root, DP readings of <0.001 decelerations are furthered split by ALTV “percentage of time with abnormal long term variability” of <68 to the left, and >68 to the right to node 44. The footprint of the tree is significantly large, illustrated in figure 2.1  Also, although the greater concentration of pathologic cases is located at the right side of the tree, additional pathologic cases are noticed on the left limbs, namely node 22, 21, and 15.  As an observation, this is an example of irregular behaviors potentially hidden from human sight. 
+
+
+
+>>Irregular behaviors, normally hidden to the naked eye, can easily get identified by using algorigthms like the ctree
+
+
+
+```{r viz, include=TRUE, echo=TRUE, fig.width=14, fig.height=12}
+# Tree visualization
+plot(model, type="extended", ep_args = list(justmin=9), drop_terminal=FALSE, tnex=1.02, 
+     gp=gpar(fontsize = 9, col="dark blue"),
+     inner_panel = node_inner(model, fill=c("light grey","green"), pval=TRUE), 
+     terminal_panel=node_barplot(model, fill=c(3,7,2), beside=TRUE, ymax=1.1, rot = 75,
+     just = c(.95,.5), ylines=TRUE, widths =.01, gap=.3, reverse=FALSE, id=TRUE), 
+     margins = c(4,3,3,3), 
+     main="Cardiotocography Data\n Conditional Inference Tree")
+```
+
+_Figure 1.5 - Structure of training dataset model._ 
+
+Click [HERE](trainingmodel.png) for an amplified view of Figure 1.5.
+
+<br/>
+
+The following confusion matrix illustrates how the model performed against the training data. Out of 1523 total observations, the model properly categorized 1413 of these, reaching a predicting classification accuracy of ~93%.  
+
+```{r matrix, include=TRUE, echo=FALSE}
+# Confusion matrix
+table(predict(model), train.data$NSP, dnn=c("PREDICTED", "ACTUAL"))
+# predicted classification accuracy with training data
+sum(predict(model) == train.data$NSP)/length(train.data$NSP)
+prop.table(table(predict(model), train.data$NSP, dnn=c("PREDICTED", "ACTUAL")))
+```
+
+_Figure 1.6 – Training model confusion matrix._
+
+<br/>
+
+### Output
+
+Completed the training portion, the test sample was evaluated against the model. As mentioned before, this set contained the remaining 30% of the population. The test set branched out to 16 inner nodes and 17 leaf nodes, for a total of 33. Nodes 33, 32, 30, 28, 18, 17, and 15 were characterized by containing observations identified as pathologic. Alternatively, node 27, 24, and 14 predominant classification was suspect.  
+
+```{r test.model, include=TRUE, echo=TRUE}
+# Evaluate the model on a test data
+model2 <- ctree(myFormula, data = test.data)
+print(model2)
+```
+
+_Figure 1.7 – Structure of the test data model._
+
+<br/>
+
+```{r, include=TRUE, echo=TRUE, fig.height=12, fig.width=14}
+plot(model2, ep_args = list(justmin=9), type="extended", drop_terminal = FALSE, tnex=1.0, gp=gpar(fontsize=9, col="dark blue"), 
+     inner_panel = node_inner(model2, fill=c("lightgrey","yellow"), pval=TRUE, id=TRUE),
+     terminal_panel=node_barplot(model2, col="black", fill=c(3,7,2), beside=TRUE, 
+     ymax=1.1, rot = 90, just = c("right", "top"), ylines=TRUE, , widths=.01, gap=0.3, reverse=FALSE,id=TRUE), main="Cardiotocography Data CTREE Extended", cex.main=1.5)
+```
+
+_Figure 1.8 – Test data conditional inference tree._ 
+
+Click [HERE](testdata.png) for an amplified view of Figure 1.8.
+
+<br/>
+
+Per the above graphic (figure 1.8), variables prolonged decelerations (DP), percentage of time with abnormal long term variability (ALTV), and percentage of time with abnormal short term variability (ASTV) were key splitting nodes affecting all other child-nodes. The data does not provide the causes of these irregularities, but it does highly the importance of such percentages as indicators to constantly observe. Importantly, node 5 portrays a split based on FHR baseline changes (DL). It segregates readings based on those below or above the 1% variation. Those greater than or equal to 0.01 branch out to terminal node 15, including pathologic readings. On the other side, those less than or equal to 0.01 branch to the left. This node 5 splitting point, captures 403 out of the 637 samples for a total of 64.5% (including node 15) based on the DL reading, highlighting the previously mentioned assumption on the importance of those DL readings within 2 standard deviations. The confusion matrix for the test.data model captures a total of 555 correct predictions for a classification accuracy rate of 92% with confidence intervals between 89.5% and 94%. 
+
+```{r, include=TRUE, echo=TRUE}
+# Confusion matrix and stats
+testPred2 <- predict(model2, newdata = test.data)
+confusionMatrix(testPred2, test.data$NSP)
+```
+
+_Figure 1.9 – Test data sample confusion matrix._
+
+<br/>
+
+### Conclusion 
+
+Based on the above model’s descriptions, and inferred findings, one may argue and advocate for the use of supervised learning algorithms, like the ctree. This can definitely serve as supporting mechanisms through the medical industry, especially, as evaluated here neonatal, or labor and delivery medical departments. Per the described intended goals, this study employed the ctree methodology to assess and classified independent variables and their influence toward the response variable of NSP. As previously alluded, the model enhances uncovering inclinations, branches, or tree nodes not typically perceivable by the human naked-eye, thus discourages the practice of CTG interpretation solely based on the medical practitioner experience. Although this is a basic assessment of the usability of the ctree algorithm, supplemented with other data mining techniques including, but not limited to, clustering, classification, and dimensionality reduction, could boost the performance accuracy of the model while reducing error variances. Some encountered challenges while conducting the study were related to identifying the best transformation techniques or interpretation of the data, given the limited background of the medical domain. As a recommendation, any future development of this algorithm in relation to CTGs would highly benefit from having sustainable knowledge within this medical area. For best accuracy outcomes, better transformation techniques and variables selection process is advised 
+
+<br/><br/><br/>
+
+
+
+
+**Disclaimer:** The views expressed in this analysis are those of the author, for educational purposes, and do not reflect an official interpretation or position of the entities herein mentioned. 
+
+**Note:** The `echo = FALSE` parameter was added to the code chunks to prevent printing some of the underpinning R code calculations.
