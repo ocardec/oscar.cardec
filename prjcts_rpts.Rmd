@@ -11,7 +11,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-##### [MIT License Copyright (c) 2023 Cardec Solutions](docs/mit_license.html) 
+###### [MIT License Copyright (c) 2023 Cardec Solutions](docs/mit_license.html) 
 
 <br/>
 
