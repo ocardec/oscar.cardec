@@ -12,7 +12,7 @@ links:
   - label: LinkedIn Account
     url: "https://www.linkedin.com/in/oscarcardec/"
   - label: Analytic Reports
-    url: "index2.html"
+    url: "index2.html" 
   - label: GitHub Repo
     url: "https://github.com/ocardec"
   - label: Email Address
