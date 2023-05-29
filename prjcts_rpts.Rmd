@@ -1,5 +1,5 @@
 ---
-title: "Welcome to My Portfolio!"
+title: "My Data Analytic Files"
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
@@ -35,5 +35,5 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - #### [Association Rules for Credit Approvals with Apriori](reports/AssociationApriori.pdf)
 
-- #### [Logistic Regresion and Default of Credit Card Payments](reports/LogisticRegression.pdf) 
+- #### [Logistic Regresion and Default of Credit Card Payments](reports/LogisticRegression.pdf)
 
