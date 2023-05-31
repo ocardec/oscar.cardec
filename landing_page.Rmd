@@ -1,28 +1,26 @@
 ---
-title: "Oscar 'OC' Cardec"
+title: "Oscar Cardec"
 image: "docs/RoundPicture.jpg"
 knit: (function(input_file, encoding) {
-  out_dir <- 'docs';
+  out_dir <- 'html';
   rmarkdown::render(input_file,
  encoding=encoding,
  output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 links:
-  - label: Merit Page - Academia
+  - label: Merit Page
     url: "https://meritpages.com/ocardec"
-  - label: LinkedIn Account
+  - label: LinkedIn
     url: "https://www.linkedin.com/in/oscarcardec/"
-  - label: Analytic Reports
-    url: "index2.html" 
-  - label: GitHub Repo
-    url: "https://github.com/ocardec"
+  - label: Resume
+    url: "docs/resume052023.pdf"  
+  - label: Resources
+    url: "html/resources.html"
+  - label: Reports
+    url: "html/reports.html"
+  - label: Books
+    url: "html/books.html"
   - label: Email Address
     url: "mailto:ocmain@gocardec.com"
-  - label: Current Resume
-    url: "docs/OscarCardec-Resumev2.pdf"
-  - label: Data Science Resources
-    url: "docs/ds_resources.html"
-  - label: Recommended Books
-    url: "books/Books.html"
 output:
   postcards::trestles
 ---  
@@ -57,4 +55,5 @@ US Air Force \| Aerospace Maintenance Craftman \| 2000 - 2007
 
 ---  
 
+<p style="text-align:right;">CAO: May '23</p>
 

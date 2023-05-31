@@ -1,7 +1,7 @@
 ---
 title: "Cardiotocograms Classification with CTREE in RStudio"
-author: "by O.Cardec"
-date: "10/01/2020"
+author: "by OC"
+date: "Oct 2020"
 output:
   html_document:
     df_print: default
@@ -11,7 +11,7 @@ output:
     highlight: espresso
     theme: sandstone
     toc: yes
-  pdf_document: default
+  pdf_document: no
   html_notebook: 
     number_sections: yes
 height: 1800
@@ -44,7 +44,7 @@ ctg<-read.csv(file="cardiotocography.csv", head=TRUE, sep=",", as.is=FALSE)
 
 ### Preface   
 
-Cardiotocograms, also known as CTGs, have been instrumental within clinical medicine for a long time. Obstetricians use these measurements and classifications to obtain detailed information and intelligence about newborns and their mothers prior to and during labor. In 2018, an article presented through the Journal of Clinical Medicine detailed the practicality of CTGs. The same noted that interpretations of these censorial readings are mainly attributed to the observer; which creates challenges of consistency of interpretations and defies the human naked eye. Questions like what happens, if or when, the interpreter misses a key detail? Furthermore, what time-sensitive conditions may the measurements uncover, requiring immediate actions are few examples of concerns posed by the continuous practice of merely optical assessments of a CTG [^5](References.html).     
+Cardiotocograms, also known as CTGs, have been instrumental within clinical medicine for a long time. Obstetricians use these measurements and classifications to obtain detailed information and intelligence about newborns and their mothers prior to and during labor. In 2018, an article presented through the Journal of Clinical Medicine detailed the practicality of CTGs. The same noted that interpretations of these censorial readings are mainly attributed to the observer; which creates challenges of consistency of interpretations and defies the human naked eye. Questions like what happens, if or when, the interpreter misses a key detail? Furthermore, what time-sensitive conditions may the measurements uncover, requiring immediate actions are few examples of concerns posed by the continuous practice of merely optical assessments of a CTG [5](References.html).     
 
 The following report presents an assessment of CTGs using the conditional inference tree (ctree) model within RStudio. The same shows how the algorithm expedites and enhances the interpretation of CTG readings while appraising multiple fetal readings simultaneously. Moreover, the study aims to identify potentially hidden patterns that may require further attention. 
 
@@ -197,7 +197,7 @@ ctg[,1:12] %>%
 ```
 _Figure 1.4 – Dataset transformed._
 
-Click [HERE](final_distributions.png) for an amplified view of Figure 1.4
+Click [HERE](images/final_distributions.png) for an amplified view of Figure 1.4
 
 <br/>
 
@@ -243,7 +243,7 @@ plot(model, type="extended", ep_args = list(justmin=9), drop_terminal=FALSE, tne
 
 _Figure 1.5 - Structure of training dataset model._ 
 
-Click [HERE](trainingmodel.png) for an amplified view of Figure 1.5.
+Click [HERE](images/trainingmodel.png) for an amplified view of Figure 1.5.
 
 <br/>
 
@@ -284,7 +284,7 @@ plot(model2, ep_args = list(justmin=9), type="extended", drop_terminal = FALSE, 
 
 _Figure 1.8 – Test data conditional inference tree._ 
 
-Click [HERE](testdata.png) for an amplified view of Figure 1.8.
+Click [HERE](images/testdata.png) for an amplified view of Figure 1.8.
 
 <br/>
 
@@ -306,9 +306,14 @@ Based on the above model’s descriptions, and inferred findings, one may argue 
 
 <br/><br/><br/>
 
+---  
 
+_Disclaimer_: The views expressed in this analysis are those of the author, for educational purposes, and do not reflect an official interpretation or position of the entities herein mentioned. 
 
+_Note_: The `echo = FALSE` clause was used to exclude printing some of the underpinning R calculations.  
 
-**Disclaimer:** The views expressed in this analysis are those of the author, for educational purposes, and do not reflect an official interpretation or position of the entities herein mentioned. 
+<br/><br/><br/>
 
-**Note:** The `echo = FALSE` parameter was added to the code chunks to prevent printing some of the underpinning R code calculations.
+[Home Page](index.html)&nbsp;|&nbsp;[Resources](resources.html)&nbsp;|&nbsp;[Reports](reports.html)&nbsp;|&nbsp;[Books](books.html)
+
+<br/>

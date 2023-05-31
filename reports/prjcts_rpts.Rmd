@@ -1,23 +1,23 @@
 ---
-title: "My Data Analytic Files"
+title: "My Data Analytic Reports"
 knit: (function(input_file, encoding) {
-  out_dir <- 'docs';
+  out_dir <- '../html';
   rmarkdown::render(input_file,
  encoding=encoding,
- output_file=file.path(dirname(input_file), out_dir, 'index2.html'))})
+ output_file=file.path(dirname(input_file), out_dir, 'reports.html'))})
 output: html_document
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-##### [MIT License Copyright (c) 2023 Cardec Solutions](docs/mit_license.html) 
+###### [MIT License Copyright (c) 2023 Cardec Solutions](mit_license.html) 
   
 <br/>
 
 #### Projects
 
-- #### [Cardiotocograms Interpretation and Classification with RStudio CTREE](CTREE/CTREE_RMarkdown.html)
+- #### [Cardiotocograms Interpretation and Classification with RStudio CTREE](ctree/ctree.html)
 
 - #### [Classification of Aircraft's Lateral Deviation](reports/ClassificationACFTLateralDeviation.pdf)
 
@@ -50,4 +50,4 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ---  
 
-[Home Page](index.html)
+[Home Page](index.html)&nbsp;|&nbsp;[Resources](resources.html)&nbsp;|&nbsp;[Reports](reports.html)&nbsp;|&nbsp;[Books](books.html)

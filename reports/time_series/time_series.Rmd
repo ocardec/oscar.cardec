@@ -1,7 +1,12 @@
 ---
 title: "Time Series Analysis"
 author: "by OC"
-output: html_document
+
+knit: (function(input_file, encoding) {
+  out_dir <- '../../html';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'time_series.html'))})
 ---
 
 ---  

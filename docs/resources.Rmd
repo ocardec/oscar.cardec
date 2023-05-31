@@ -1,14 +1,21 @@
 ---
-title: "Data Science Resources List"
+title: "Data Science Resources"
 author: "by OC"
+knit: (function(input_file, encoding) {
+  out_dir <- '../html';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'resources.html'))})
+ 
 output:
   html_document: default
-  pdf_document: default
 ---
 
 ------------------------------------------------------------------------
 
-The following is an opinionated list of open source and private resources to improve your data science and machine learning skills. This list is by no means an all-inclusive list of tools and resources, but instead some of the ones I have used during my data journey.
+The following is an opinionated list of open source and private resources to improve your data science and machine learning skills. This list is by no means an all-inclusive list of tools and resources, but instead some of the ones I have used during my journey.
+
+<br/><br/>
 
 #### Resources
 
@@ -96,4 +103,4 @@ The following is an opinionated list of open source and private resources to imp
 
 ---  
 
-[Home Page](index.html)
+[Home Page](index.html)&nbsp;|&nbsp;[Resources](resources.html)&nbsp;|&nbsp;[Reports](reports.html)&nbsp;|&nbsp;[Books](books.html)
