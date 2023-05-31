@@ -24,4 +24,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---  
 
-[Home Page](index.html)&nbsp;|&nbsp;[Resources](resources.html)&nbsp;|&nbsp;[Reports](reports.html)&nbsp;|&nbsp;[Books](books.html)
+[Home Page](index.html)

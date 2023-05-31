@@ -314,6 +314,6 @@ _Note_: The `echo = FALSE` clause was used to exclude printing some of the under
 
 <br/><br/><br/>
 
-[Home Page](index.html)&nbsp;|&nbsp;[Resources](resources.html)&nbsp;|&nbsp;[Reports](reports.html)&nbsp;|&nbsp;[Books](books.html)
+[Home Page](../index.html)
 
 <br/>
