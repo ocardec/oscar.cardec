@@ -1,0 +1,31 @@
+---
+title: "Time Series Analysis"
+author: "by OC"
+output: html_document
+---
+
+---  
+
+<br/><br/>
+
+#### Apple Stocks   
+
+
+![](start.png){width="3200"}  
+<br/><br/><br/>
+![](introduction.png){width="3200"}  
+<br/><br/><br/>
+![](dashboard.png){width="3200"}  
+<br/><br/><br/>
+![](cost_price.png){width="3200"}  
+<br/><br/><br/>
+![](forecast.png){width="3200"}  
+<br/>
+
+
+<br/><br/><br/><br/>  
+
+---  
+
+[Home Page](index.html)
+

@@ -1,5 +1,5 @@
 ---
-title: "Oscar Cardec"
+title: "Oscar 'OC' Cardec"
 image: "docs/RoundPicture.jpg"
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
@@ -21,6 +21,8 @@ links:
     url: "docs/OscarCardec-Resumev2.pdf"
   - label: Data Science Resources
     url: "docs/ds_resources.html"
+  - label: Recommended Books
+    url: "books/Books.html"
 output:
   postcards::trestles
 ---  
@@ -50,13 +52,9 @@ US Air Force \| Intelligence Analyst \| 2013 - 2020
 US Air Force \| Information & Database Administrator \| 2007 - 2013  
 US Air Force \| Aerospace Maintenance Craftman \| 2000 - 2007  
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
+<br/><br/><br/><br/>  
 
 ---  
 
-<p style="text-align: right;">_May 2023_</p>
+

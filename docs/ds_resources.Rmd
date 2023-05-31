@@ -1,6 +1,6 @@
 ---
 title: "Data Science Resources List"
-date: "May 2023"
+author: "by OC"
 output:
   html_document: default
   pdf_document: default
@@ -8,11 +8,10 @@ output:
 
 ------------------------------------------------------------------------
 
-> The following is an opinionated list of open source and private resources to improve your data science and machine learning skills. This list is by no means an all-inclusive list of tools and resources, but instead some of the ones I have used during my data journey.
+The following is an opinionated list of open source and private resources to improve your data science and machine learning skills. This list is by no means an all-inclusive list of tools and resources, but instead some of the ones I have used during my data journey.
 
 #### Resources
 
--   [OpenAI](https://openai.com/)
 -   [The Algorithms](https://the-algorithms.com)
 -   [Data Science Resource Hub - SAS](https://www.sas.com/en_us/training/academy-data-science/data-science-resources.html#data-scientist-learning-journey)
 -   [Data Science Central](https://www.datasciencecentral.com/category/technical-topics/data-science/)
@@ -36,7 +35,6 @@ output:
 -   [Python Data Science Handbook](https://www.oreilly.com/library/view/python-data-science/9781491912126/)
 -   [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/)
 -   [R Books Collection](https://www.rstudio.com/resources/books/)  
-
 
 #### Libraries & Packages
 
@@ -93,6 +91,9 @@ output:
 -   [OperationCode](https://operationcode.org/code_schools)
 
 
-------------------------------------------------------------------------
 
-![](docs/CardecRndLogo.png){width="89"} For questions/comments [Email Me](mailto:ocmain@gocardec.com)
+<br/><br/><br/><br/>  
+
+---  
+
+[Home Page](index.html)
