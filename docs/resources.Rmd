@@ -41,7 +41,8 @@ The following is an opinionated list of open source and private resources to imp
 -   [R For Data Science - H.Wickham](https://r4ds.had.co.nz)
 -   [Python Data Science Handbook](https://www.oreilly.com/library/view/python-data-science/9781491912126/)
 -   [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/)
--   [R Books Collection](https://www.rstudio.com/resources/books/)  
+-   [R Books Collection](https://www.rstudio.com/resources/books/) 
+-   [Big Book of R](https://www.bigbookofr.com)
 
 #### Libraries & Packages
 
@@ -83,6 +84,20 @@ The following is an opinionated list of open source and private resources to imp
 -   [Spark MLlib](https://spark.apache.org)
 -   [DominoDataLab](https://www.dominodatalab.com/solutions/data-scientists/)
 
+#### Podcasts
+
+-   [Super Data Science with Jon Krohn](https://podcasts.apple.com/us/podcast/super-data-science/id1163599059)
+-   [Harvard Data Science Review](https://podcasts.apple.com/us/podcast/harvard-data-science-review-podcast/id1558728983)
+-   [The Data Canteen with Ted Hallum](https://podcasts.apple.com/us/podcast/the-data-canteen/id1551751086)
+-   [Experiencing Data with Brian O'Neill](https://podcasts.apple.com/us/podcast/experiencing-data-with-brian-t-oneill/id1444887095)
+-   [Data Skeptic with Kyle Polich](https://podcasts.apple.com/us/podcast/data-skeptic/id890348705)
+-   [The TWIML AI Podcast with Sam Charrington](https://podcasts.apple.com/us/podcast/the-twiml-ai-podcast-formerly-this-week-in-machine/id1116303051)
+-   [DataFramed by datacamp](https://podcasts.apple.com/us/podcast/dataframed/id1336150688)
+-   [The Data Scientist Show with Daliana Liu](https://podcasts.apple.com/us/podcast/the-data-scientist-show/id1584430381)
+-   [Practical AI: Machine Learning, Data Science with Changelog Media](https://podcasts.apple.com/us/podcast/practical-ai-machine-learning-data-science/id1406537385)
+-   [The Artists of Data Science with Harpreet Sahota](https://podcasts.apple.com/us/podcast/the-artists-of-data-science/id1506968775)
+-   [Machine Learning with Andrew Ng](https://podcasts.apple.com/us/podcast/machine-learning/id384233048)
+-   [Data Science Leaders with Dave Cole](https://podcasts.apple.com/us/podcast/data-science-leaders/id1564587119)
 
 #### Miscellaneous
 
