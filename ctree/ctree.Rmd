@@ -11,7 +11,7 @@ output:
     highlight: espresso
     theme: sandstone
     toc: yes
-    keep_md: yes
+    keep_md: no
   pdf_document: no
   html_notebook: 
     number_sections: yes
