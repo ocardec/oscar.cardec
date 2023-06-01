@@ -3,7 +3,7 @@ title: "Cardiotocograms Classification with CTREE in RStudio"
 author: "by OC"
 date: "Oct 2020"
 output:
-  html_document:
+  html_document: 
     df_print: default
     fig_caption: yes
     fig_height: 7
@@ -11,6 +11,7 @@ output:
     highlight: espresso
     theme: sandstone
     toc: yes
+    keep_md: yes
   pdf_document: no
   html_notebook: 
     number_sections: yes

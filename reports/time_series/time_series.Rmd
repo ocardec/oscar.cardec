@@ -32,5 +32,5 @@ knit: (function(input_file, encoding) {
 
 ---  
 
-[Home Page](index.html)
+[Home Page](../index.html)
 
