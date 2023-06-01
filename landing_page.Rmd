@@ -37,8 +37,7 @@ output:
 
 #### Education  
 University of Maryland \| Adelphi, MD - MS in Data Analytic  
-American Military University \| Charles Town, WV - BS in I.T. Management  
-C.C. of the Air Force \| Maxwell AFB, AL - AS in Intelligence Studies & Technology  
+American Military University \| Charles Town, WV - BS in Information Technology Management
 
 <br/>
 
