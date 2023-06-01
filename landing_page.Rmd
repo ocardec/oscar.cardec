@@ -9,17 +9,17 @@ knit: (function(input_file, encoding) {
 links:
   - label: Merit Page
     url: "https://meritpages.com/ocardec"
-  - label: LinkedIn
+  - label: LinkedIn Account
     url: "https://www.linkedin.com/in/oscarcardec/"
-  - label: Resume
-    url: "docs/resume052023.pdf"  
-  - label: Resources
+  - label: Current Resume
+    url: "docs/resume052023.pdf"
+  - label: Recommended Resources
     url: "html/resources.html"
-  - label: Reports
+  - label: My Analityc Reports
     url: "html/reports.html"
-  - label: Books
+  - label: Recommended Books
     url: "html/books.html"
-  - label: Email Address
+  - label: My Email Address
     url: "mailto:ocmain@gocardec.com"
 output:
   postcards::trestles
@@ -33,7 +33,7 @@ output:
 
 #### Bio
 
-> Lead Data Scientist, United States Air Force Veteran and Cyber Intelligence Analyst with an active security clearance and over 20+ years of proven experience managing operations, personnel, and resources, adhering to, and enforcing standards and regulations, and balancing multiple projects while still maintaining a focus on providing quality results. Possess a comprehensive background knowledge in machine learning and predictive analytics, intelligence analysis, management, strategic planning, and cyber intelligence operations derived from steering domestic and global operations in support of the Department of Defense and the Intelligence Community.
+> Lead Data Scientist, United States Air Force Veteran and Cyber Intelligence Analyst with an active security clearance and over 20+ years of proven experience managing operations, personnel, and resources, adhering to, and enforcing standards and regulations, and balancing multiple projects while still maintaining a focus on providing quality results. Possess a comprehensive background knowledge in machine learning and predictive analytics, intelligence analysis, management, strategic planning, and cyber intelligence domain derived from steering domestic and global operations in support of the Department of Defense and the Intelligence Community.
 
 <br/>
 
@@ -49,16 +49,11 @@ American Military University \| Charles Town, WV - BS in Information Technology 
 GovCIO \| Data Scientist - ML Specialist \| 2023 - Present\
 Deloitte & Touche, LLC \| Lead Data Scientist \| 2021 - 2023\
 Accenture Federal Services \| Data Science Intern \| 2020 - 2021\
-US Air Force \| Intelligence Analyst \| 2013 - 2020\
+US Air Force \| Manager, Intelligence Analyst \| 2013 - 2020\
 US Air Force \| Information & Database Administrator \| 2007 - 2013\
-US Air Force \| Aerospace Maintenance Craftman \| 2000 - 2007
+US Air Force \| Aerospace Maintenance Craftsman \| 2000 - 2007
 
 <br/><br/><br/>
 
 ------------------------------------------------------------------------
-
-<p style="text-align:right;">
-
-CAO: May '23
-
-</p>
+<p style="text-align:right;">CAO: May'23</p>

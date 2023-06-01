@@ -58,6 +58,5 @@ The following is an opinionated list of open source and private resources to imp
 
 <br/><br/><br/> 
 
----  
-
+---
 [Home Page](../index.html)
