@@ -1,0 +1,50 @@
+---
+title: "My Data Analytic Reports"
+knit: (function(input_file, encoding) {
+  out_dir <- '../html';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'reports.html'))})
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###### [MIT License Copyright (c) 2023 Cardec Solutions](mit_license.html) 
+  
+<br/>
+
+#### Projects & Reports
+
+- #### [Classification of Aircraft's Lateral Deviation - Nov 2021](../reports/ClassificationACFTLateralDeviation.pdf)
+
+- #### [Landsat Multispectral Scanner Image's Classification with Kmeans Clustering - Nov 2020](../reports/UnsupervisedLearningKmeans.pdf)
+
+- #### [Breast Cancer Dataset Classification with R NeuralNet - Oct 2020](../reports/NeuralNetworksR.pdf)
+
+- #### [Cardiotocograms Interpretation and Classification with RStudio CTREE Sep 2020](../ctree/ctree.html)
+
+- #### [Logistic Regresion and Default of Credit Card Payments - Sep 2020](../reports/LogisticRegression.pdf)
+
+- #### [Vehicles Valuation with Multilinear Regression in R - Sep 2020](../reports/MultipleLinearRegression.pdf)
+
+- #### [Association Rules for Credit Approvals with R Apriori - Aug 2020](../reports/AssociationApriori.pdf)
+
+- #### [National Security Strategy Text Analysis with NLTK and Tableau Visualizations - Aug 2020](../text_analysis/README.html)
+
+<br/>
+
+#### Infographics
+
+- #### [Apple Stock Market Time Series Analysis - Jul 2020](time_series.html)
+
+- #### [Middle East GDP Geospatial Analysis - Jul 2020](../infographic/geospatial_analysis.png)  
+
+- #### [The Resistance Needs You, Join the Alliance - Jun 2020](../infographic/jointhealliance.png)
+
+<br/><br/><br/><br/>  
+
+---  
+
+[Home Page](../index.html)
