@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - #### [National Security Strategy Text Analysis with NLTK and Tableau Visualizations](../text_analysis/README.html)
 
-- #### [Apple Stock Market Time Series Analysis](../reports/time_series/time_series.html)
+- #### [Apple Stock Market Time Series Analysis](time_series.html)
 
 <br/>
 
