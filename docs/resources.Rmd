@@ -10,53 +10,54 @@ knit: (function(input_file, encoding) {
 output:
   html_document: default
 ---
-
-------------------------------------------------------------------------
+---
 
 The following is an opinionated list of open source and private resources to improve your data science and machine learning skills. This list is by no means an all-inclusive list of tools and resources, but instead some of the ones I have used during my journey.
 
-<br/><br/>
+<br/>
 
 #### Resources
 
--   [The Algorithms](https://the-algorithms.com)&nbsp;&nbsp; | &nbsp;&nbsp;[Data Science Resource Hub - SAS](https://www.sas.com/en_us/training/academy-data-science/data-science-resources.html#data-scientist-learning-journey)&nbsp;&nbsp; | &nbsp;&nbsp;[Data Science Central](https://www.datasciencecentral.com/category/technical-topics/data-science/)&nbsp;&nbsp; | &nbsp;&nbsp;[Data, AI, & Machine Learning](https://sloanreview.mit.edu/topic/data-ai-machine-learning/)
--   [Social Network Analysis](https://www.kdnuggets.com/2015/06/top-30-social-network-analysis-visualization-tools.html)&nbsp;&nbsp; | &nbsp;&nbsp;[Analyze Data with Python - Codeacademy](https://www.codecademy.com/learn/paths/analyze-data-with-python)&nbsp;&nbsp; | &nbsp;&nbsp;[Introduction to Data Science - IBM](https://www.edx.org/course/intro-to-data-science?index=product&search_index=product&webview=false&campaign=Introduction+to+Data+Science&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Flearn%2Fdata-analysis)
--   [The Data Scientist's Toolbox - John Hopkins University](https://www.coursera.org/learn/data-scientists-tools)&nbsp;&nbsp; | &nbsp;&nbsp;[Professional Certificate in Data Science - Harvard University edX](https://www.edx.org/professional-certificate/harvardx-data-science?index=product&search_index=product&webview=false&campaign=Data++Science&source=edX&product_category=professional-certificate&placement_url=https%3A%2F%2Fwww.edx.org%2Flearn%2Fdata-analysis)
--   [Applied Data Science Program - MIT Professional Education](https://professional-education-gl.mit.edu/mit-applied-data-science-course?&utm_source=google&utm_medium=search&utm_campaign=ADSB_Int_Search_Program_Broad_US-E_NewLP&adgroup_id=152133034790&campaign_id=20012657719&Keyword=data%20scientist%20program&placement=&utm_content=655818703904&utm_target=kwd-57785127948&gclid=CjwKCAjwscGjBhAXEiwAswQqNFgWeE1nquYWCBJV8r_WHNmkgvqUGVqmjMcVyufULcz24lIdp3U37xoC6gIQAvD_BwE)&nbsp;&nbsp; | &nbsp;&nbsp;[Deep Learning Courses - Deeplizard](https://deeplizard.com)
+-   [The Algorithms](https://the-algorithms.com)&nbsp;&nbsp; | &nbsp;&nbsp;[SAS Data Science Resource Hub](https://www.sas.com/en_us/training/academy-data-science/data-science-resources.html#data-scientist-learning-journey)&nbsp;&nbsp; | &nbsp;&nbsp;[Data Science Central](https://www.datasciencecentral.com/category/technical-topics/data-science/)&nbsp;&nbsp; | &nbsp;&nbsp;[Data, AI, & Machine Learning](https://sloanreview.mit.edu/topic/data-ai-machine-learning/)
+-   [Social Network Analysis](https://www.kdnuggets.com/2015/06/top-30-social-network-analysis-visualization-tools.html)&nbsp;&nbsp; | &nbsp;&nbsp;[Analyze Data with Python](https://www.codecademy.com/learn/paths/analyze-data-with-python)&nbsp;&nbsp; | &nbsp;&nbsp;[IBM Introduction to Data Science](https://www.edx.org/course/intro-to-data-science?index=product&search_index=product&webview=false&campaign=Introduction+to+Data+Science&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Flearn%2Fdata-analysis)
+-   [JHU The Data Scientist's Toolbox](https://www.coursera.org/learn/data-scientists-tools)&nbsp;&nbsp; | &nbsp;&nbsp;[Harvard University edX Professional Certificate in Data Science](https://www.edx.org/professional-certificate/harvardx-data-science?index=product&search_index=product&webview=false&campaign=Data++Science&source=edX&product_category=professional-certificate&placement_url=https%3A%2F%2Fwww.edx.org%2Flearn%2Fdata-analysis)
+-   [MIT PE Applied Data Science Program](https://professional-education-gl.mit.edu/mit-applied-data-science-course?&utm_source=google&utm_medium=search&utm_campaign=ADSB_Int_Search_Program_Broad_US-E_NewLP&adgroup_id=152133034790&campaign_id=20012657719&Keyword=data%20scientist%20program&placement=&utm_content=655818703904&utm_target=kwd-57785127948&gclid=CjwKCAjwscGjBhAXEiwAswQqNFgWeE1nquYWCBJV8r_WHNmkgvqUGVqmjMcVyufULcz24lIdp3U37xoC6gIQAvD_BwE)&nbsp;&nbsp; | &nbsp;&nbsp;[Deeplizard Deep Learning Courses](https://deeplizard.com)  
 
 #### Projects & Books
 
 -   [Data Science Projects for Beginnners](https://data-flair.training/blogs/data-science-projects-code/)&nbsp;&nbsp; | &nbsp;&nbsp;[Deeplearning Toolbox](https://www.mathworks.com/help/deeplearning/examples.html?s_tid=ans_recom_nba-get)&nbsp;&nbsp; | &nbsp;&nbsp;[40+ Machine Learning Modern Tutorials](https://www.datasciencecentral.com/40-tutorials-covering-all-aspects-of-machine-learning/)
--   [100+ Python Projects with SRC](https://thecleverprogrammer.com/2021/01/14/python-projects-with-source-code/)&nbsp;&nbsp; | &nbsp;&nbsp;[R For Data Science - H.Wickham](https://r4ds.had.co.nz)&nbsp;&nbsp; | &nbsp;&nbsp;[Python Data Science Handbook](https://www.oreilly.com/library/view/python-data-science/9781491912126/)
+-   [100+ Python Projects with SRC](https://thecleverprogrammer.com/2021/01/14/python-projects-with-source-code/)&nbsp;&nbsp; | &nbsp;&nbsp;[R For Data Science](https://r4ds.had.co.nz)&nbsp;&nbsp; | &nbsp;&nbsp;[Python Data Science Handbook](https://www.oreilly.com/library/view/python-data-science/9781491912126/)
 -   [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/)&nbsp;&nbsp; | &nbsp;&nbsp;[R Books Collection](https://www.rstudio.com/resources/books/)
--   [Data Science on the the Google Cloud Platform](https://www.oreilly.com/library/view/data-science-on/9781491974551/)&nbsp;&nbsp; | &nbsp;&nbsp;[Big Book of R](https://www.bigbookofr.com)
+-   [Data Science on the GCP](https://www.oreilly.com/library/view/data-science-on/9781491974551/)&nbsp;&nbsp; | &nbsp;&nbsp;[Big Book of R](https://www.bigbookofr.com)  
 
 #### Libraries & Packages
 
 -   [SciKit-Learn](https://scikit-learn.org/stable/)&nbsp;&nbsp; | &nbsp;&nbsp;[TensorFlow](https://www.tensorflow.org)&nbsp;&nbsp; | &nbsp;&nbsp;[Keras](https://keras.io/examples/)&nbsp;&nbsp; | &nbsp;&nbsp;[PyTorch](https://pytorch.org)&nbsp;&nbsp; | &nbsp;&nbsp;[TensorFlow for R](https://tensorflow.rstudio.com/?_gl=1*mehmyf*_ga*MTMyMDE5NzEyMi4xNjg1MDMwNzUx*_ga_2C0WZ1JHG0*MTY4NTE1Njk4My40LjEuMTY4NTE1NzMyMy4wLjAuMA..)&nbsp;&nbsp; | &nbsp;&nbsp;[Caret](https://topepo.github.io/caret/)&nbsp;&nbsp; | &nbsp;&nbsp;[Tidymodels](https://www.tidymodels.org)
 -   [$H_2O$.ai](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/faq/r.html)&nbsp;&nbsp; | &nbsp;&nbsp;[Tidyverse](https://www.tidyverse.org)&nbsp;&nbsp; | &nbsp;&nbsp;[ggplot2](https://exts.ggplot2.tidyverse.org/gallery/)&nbsp;&nbsp; | &nbsp;&nbsp;[Matplotlib](https://matplotlib.org/stable/index.html)&nbsp;&nbsp; | &nbsp;&nbsp;[Seaborn](https://jakevdp.github.io/PythonDataScienceHandbook/04.14-visualization-with-seaborn.html)&nbsp;&nbsp; | &nbsp;&nbsp;[Visual Cinnamon](https://www.visualcinnamon.com/portfolio/)&nbsp;&nbsp; | &nbsp;&nbsp;[Grafana](https://grafana.com/grafana/)
--   [Google Charts](https://developers.google.com/chart/interactive/docs/gallery)&nbsp;&nbsp; | &nbsp;&nbsp;[Datawrapper](https://www.datawrapper.de)&nbsp;&nbsp; | &nbsp;&nbsp;[Hubspot](https://www.hubspot.com/resources/tool?hubs_content=blog.hubspot.com%2Fmarketing%2Fcolor-combination-data-visualization&hubs_content-cta=null&hubs_post=blog.hubspot.com%2Fmarketing%2Fcolor-combination-data-visualization&hubs_post-cta=null&_ga=2.148478773.327330868.1685158662-882422425.1685158662)&nbsp;&nbsp; | &nbsp;&nbsp;[ITOL](https://itol.embl.de/index.shtml)&nbsp;&nbsp; | &nbsp;&nbsp;[Posit Cheatsheets](https://posit.co/resources/cheatsheets/)&nbsp;&nbsp; | &nbsp;&nbsp;[Storytelling with Data](https://www.storytellingwithdata.com). 
+-   [Google Charts](https://developers.google.com/chart/interactive/docs/gallery)&nbsp;&nbsp; | &nbsp;&nbsp;[Datawrapper](https://www.datawrapper.de)&nbsp;&nbsp; | &nbsp;&nbsp;[Hubspot](https://www.hubspot.com/resources/tool?hubs_content=blog.hubspot.com%2Fmarketing%2Fcolor-combination-data-visualization&hubs_content-cta=null&hubs_post=blog.hubspot.com%2Fmarketing%2Fcolor-combination-data-visualization&hubs_post-cta=null&_ga=2.148478773.327330868.1685158662-882422425.1685158662)&nbsp;&nbsp; | &nbsp;&nbsp;[ITOL](https://itol.embl.de/index.shtml)&nbsp;&nbsp; | &nbsp;&nbsp;[Posit Cheatsheets](https://posit.co/resources/cheatsheets/)&nbsp;&nbsp; | &nbsp;&nbsp;[Storytelling with Data](https://www.storytellingwithdata.com)  
 
 #### BI Tools & Platforms
 
 -   [NVIDIA Data Science](https://www.nvidia.com/en-us/deep-learning-ai/software/rapids/)&nbsp;&nbsp; | &nbsp;&nbsp;[Databricks](https://www.databricks.com)&nbsp;&nbsp; | &nbsp;&nbsp;[Anaconda](https://www.anaconda.com/why-anaconda)&nbsp;&nbsp; | &nbsp;&nbsp;[KNIME](https://www.knime.com/knime-analytics-platform)&nbsp;&nbsp; | &nbsp;&nbsp;[Splunk MLTK](https://splunkbase.splunk.com/app/2890)&nbsp;&nbsp; | &nbsp;&nbsp;[Shiny](https://shiny.posit.co/?_gl=1*ndp1ah*_ga*MTMyMDE5NzEyMi4xNjg1MDMwNzUx*_ga_2C0WZ1JHG0*MTY4NTE1Njk4My40LjEuMTY4NTE1NzMxNi4wLjAuMA..)&nbsp;&nbsp; | &nbsp;&nbsp;[Mode](https://mode.com/platform/)&nbsp;&nbsp; | &nbsp;&nbsp;[OSF](https://osf.io)
--   [Watson Studio - IBM](https://www.ibm.com/cloud/watson-studio)&nbsp;&nbsp; | &nbsp;&nbsp;[SAS Enterprise Miner](https://www.sas.com/en_us/software/enterprise-miner.html)&nbsp;&nbsp; | &nbsp;&nbsp;[IBM Cognos](https://www.ibm.com/products/cognos-analytics)&nbsp;&nbsp; | &nbsp;&nbsp;[Quarto](https://quarto.org)&nbsp;&nbsp; | &nbsp;&nbsp;[Spark MLlib](https://spark.apache.org)&nbsp;&nbsp; | &nbsp;&nbsp;[DominoDataLab](https://www.dominodatalab.com/solutions/data-scientists/)
+-   [IBM Watson Studio](https://www.ibm.com/cloud/watson-studio)&nbsp;&nbsp; | &nbsp;&nbsp;[SAS Enterprise Miner](https://www.sas.com/en_us/software/enterprise-miner.html)&nbsp;&nbsp; | &nbsp;&nbsp;[IBM Cognos](https://www.ibm.com/products/cognos-analytics)&nbsp;&nbsp; | &nbsp;&nbsp;[Quarto](https://quarto.org)&nbsp;&nbsp; | &nbsp;&nbsp;[Spark MLlib](https://spark.apache.org)&nbsp;&nbsp; | &nbsp;&nbsp;[DominoDataLab](https://www.dominodatalab.com/solutions/data-scientists/)  
 
 #### Podcasts
 
 -   [Super Data Science with Jon Krohn](https://podcasts.apple.com/us/podcast/super-data-science/id1163599059)&nbsp;&nbsp; | &nbsp;&nbsp;[Harvard Data Science Review](https://podcasts.apple.com/us/podcast/harvard-data-science-review-podcast/id1558728983)&nbsp;&nbsp; | &nbsp;&nbsp;[The Data Canteen with Ted Hallum](https://podcasts.apple.com/us/podcast/the-data-canteen/id1551751086)
 -   [Experiencing Data with Brian O'Neill](https://podcasts.apple.com/us/podcast/experiencing-data-with-brian-t-oneill/id1444887095)&nbsp;&nbsp; | &nbsp;&nbsp;[Data Skeptic with Kyle Polich](https://podcasts.apple.com/us/podcast/data-skeptic/id890348705)&nbsp;&nbsp; | &nbsp;&nbsp;[The TWIML AI Podcast with Sam Charrington](https://podcasts.apple.com/us/podcast/the-twiml-ai-podcast-formerly-this-week-in-machine/id1116303051)
 -   [DataFramed by datacamp](https://podcasts.apple.com/us/podcast/dataframed/id1336150688)&nbsp;&nbsp; | &nbsp;&nbsp;[The Data Scientist Show with Daliana Liu](https://podcasts.apple.com/us/podcast/the-data-scientist-show/id1584430381)&nbsp;&nbsp; | &nbsp;&nbsp;[The Artists of Data Science with Harpreet Sahota](https://podcasts.apple.com/us/podcast/the-artists-of-data-science/id1506968775)
-[Machine Learning with Andrew Ng](https://podcasts.apple.com/us/podcast/machine-learning/id384233048)&nbsp;&nbsp; | &nbsp;&nbsp;[Data Science Leaders with Dave Cole](https://podcasts.apple.com/us/podcast/data-science-leaders/id1564587119)&nbsp;&nbsp; | &nbsp;&nbsp;[Practical AI: Machine Learning, Data Science with Changelog Media](https://podcasts.apple.com/us/podcast/practical-ai-machine-learning-data-science/id1406537385)
+[Machine Learning with Andrew Ng](https://podcasts.apple.com/us/podcast/machine-learning/id384233048)&nbsp;&nbsp; | &nbsp;&nbsp;[Data Science Leaders with Dave Cole](https://podcasts.apple.com/us/podcast/data-science-leaders/id1564587119)&nbsp;&nbsp; | &nbsp;&nbsp;[Practical AI: Machine Learning, Data Science with Changelog Media](https://podcasts.apple.com/us/podcast/practical-ai-machine-learning-data-science/id1406537385)  
 
 #### Miscellaneous
 
 -   [The Data Science Hangout](https://posit.co/data-science-hangout/)&nbsp;&nbsp; | &nbsp;&nbsp;[Therebase.Dev](https://www.therebase.dev)&nbsp;&nbsp; | &nbsp;&nbsp;[Data Humans Club](https://www.datahumans.club)&nbsp;&nbsp; | &nbsp;&nbsp;[Gitshowcase](https://www.gitshowcase.com/)
--   [The Odin Project](https://www.theodinproject.com/home)&nbsp;&nbsp; | &nbsp;&nbsp;[CodeEasy](https://codeeasy.io)&nbsp;&nbsp; | &nbsp;&nbsp;[Cybrary](https://www.cybrary.it/catalog/refined/)&nbsp;&nbsp; | &nbsp;&nbsp;[Codingame](https://www.codingame.com/start)&nbsp;&nbsp; | &nbsp;&nbsp;[OperationCode](https://operationcode.org/code_schools)
+-   [The Odin Project](https://www.theodinproject.com/home)&nbsp;&nbsp; | &nbsp;&nbsp;[CodeEasy](https://codeeasy.io)&nbsp;&nbsp; | &nbsp;&nbsp;[Cybrary](https://www.cybrary.it/catalog/refined/)&nbsp;&nbsp; | &nbsp;&nbsp;[Codingame](https://www.codingame.com/start)&nbsp;&nbsp; | &nbsp;&nbsp;[OperationCode](https://operationcode.org/code_schools)  
+
+<br/><br/>
+
+>\“There is divine beauty in learning…. To learn means to accept the postulate that life did not begin at my birth. Others have been here before me, and I walk in their footsteps.\” \―Elie Wiesel
 
 
-
-<br/><br/><br/> 
 
 ---
 [Home Page](../index.html)

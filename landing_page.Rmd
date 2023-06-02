@@ -25,19 +25,18 @@ output:
   postcards::trestles
 ---
 
-<br/>
-
 ### Welcome to my Portfolio!
 
 <br/>
+<br/>
 
-#### Bio
+#### Bio  
 
-> Lead Data Scientist, United States Air Force Veteran and Cyber Intelligence Analyst with an active security clearance and over 20+ years of proven experience managing operations, personnel, and resources, adhering to, and enforcing standards and regulations, and balancing multiple projects while still maintaining a focus on providing quality results. Possess a comprehensive background knowledge in machine learning and predictive analytics, intelligence analysis, management, strategic planning, and cyber intelligence domain derived from steering domestic and global operations in support of the Department of Defense and the Intelligence Community.
+Lead Data Scientist, United States Air Force Veteran and Cyber Intelligence Analyst with an active security clearance and over 20+ years of proven experience managing operations, personnel, and resources, adhering to, and enforcing standards and regulations, and balancing multiple projects while still maintaining a focus on providing quality results. Possess a comprehensive background knowledge in machine learning and predictive analytics, intelligence analysis, management, strategic planning, and cyber intelligence domain derived from steering domestic and global operations in support of the Department of Defense and the Intelligence Community.
 
 <br/>
 
-#### Education
+#### Education  
 
 University of Maryland \| Adelphi, MD - MS in Data Analytic\
 American Military University \| Charles Town, WV - BS in Information Technology Management
@@ -53,7 +52,7 @@ US Air Force \| Manager, Intelligence Analyst \| 2013 - 2020\
 US Air Force \| Information & Database Administrator \| 2007 - 2013\
 US Air Force \| Aerospace Maintenance Craftsman \| 2000 - 2007
 
-<br/><br/><br/>
+<br/><br/><br/><br/><br/>
 
 ------------------------------------------------------------------------
 <p style="text-align:right;">CAO: May'23</p>

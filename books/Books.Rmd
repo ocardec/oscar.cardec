@@ -34,9 +34,6 @@ output: html_document
 
 <br/><br/> 
 
->\“There is divine beauty in learning…. To learn means to accept the postulate that life did not begin at my birth. Others have been here before me, and I walk in their footsteps.\” \―Elie Wiesel
-
-
 <br/><br/><br/><br/>  
 
 ---  
