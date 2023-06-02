@@ -12,7 +12,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-[MIT License Copyright (c) 2022 Cardec Solutions](mit_license.html) 
+[MIT License Copyright (c) 2023 Cardec Solutions](mit_license.html) 
 
 <br/><br/>
 
@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #### Fall 2021
 
-- [Classification of Aircraft's Lateral Deviation](../reports/ClassificationACFTLateralDeviation.pdf)
+- [Classification of Aircraft's Lateral Deviation; Caret Models Comparison](../reports/ClassificationACFTLateralDeviation.pdf)
 
 - [Landsat Multispectral Scanner Image's Classification with Kmeans Clustering](../reports/UnsupervisedLearningKmeans.pdf)
 
@@ -30,27 +30,27 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Breast Cancer Dataset Classification with R NeuralNet](../reports/NeuralNetworksR.pdf)
 
-- [Cardiotocograms Interpretation and Classification with RStudio CTREE](../ctree/ctree.html)
+- [Cardiotocograms Interpretation and Classification with R CTREE](../ctree/ctree.html)
 
 #### Fall 2020
 
 - [Logistic Regresion and Default of Credit Card Payments](../reports/LogisticRegression.pdf)
 
-- [Vehicles Valuation with Multilinear Regression in R](../reports/MultipleLinearRegression.pdf)
+- [Vehicles Valuation with Multilinear Regression](../reports/MultipleLinearRegression.pdf)
 
 #### Summer 2020
 
 - [Association Rules for Credit Approvals with R Apriori](../reports/AssociationApriori.pdf)
 
-- [National Security Strategy Text Analysis with NLTK and Tableau Visualizations](../text_analysis/README.html)
+- [NSS Text Analysis with NLTK; Visualized in Tableau](../text_analysis/README.html)
 
 #### Spring 2020
 
-- [Apple Stock Market Time Series Analysis](time_series.html)
+- [Infographic: Apple Stock Market](time_series.html)
 
-- [Middle East GDP Geospatial Analysis](../infographic/geospatial_analysis.png)  
+- [Infographic: Middle East GDP](../infographic/geospatial_analysis.png)  
 
-- [The Resistance Needs You, Join the Alliance](../infographic/jointhealliance.png)
+- [Infographic: Join the Alliance](../infographic/jointhealliance.png)
 
 <br/><br/><br/><br/>  <br/><br/> 
 
