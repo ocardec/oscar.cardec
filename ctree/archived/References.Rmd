@@ -1,12 +1,13 @@
 ---
+title: "References"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+---  
 <br/>
-<div style="text-align:center"><span style="color:black; font-family:default; font-size:1.5em;"> References </span></div>
 
 <br/>
 

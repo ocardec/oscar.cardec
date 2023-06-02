@@ -8,11 +8,11 @@ knit: (function(input_file, encoding) {
  output_file=file.path(dirname(input_file), out_dir, 'books.html'))})
 output: html_document
 --- 
+---  
   
-
 <br/>  
 
->“Our job is obvious: We need to get out of the way, shine a light, and empower a new generation to teach itself and to go further and faster than any generation ever has.” ―Seth Godin
+> “Our job is obvious: We need to get out of the way, shine a light, and empower a new generation to teach itself and to go further and faster than any generation ever has.” ―Seth Godin
 
 <br/>  
 
@@ -32,7 +32,7 @@ output: html_document
 | ![](storytellingwithdata.jpeg){width="75"} | [Storytelling with Data: A Data Visualization Guide for Business Professionals by Cole Nussbaumer Knaflic](https://a.co/d/03JQgx4) | | ![](python3.jpeg){width="75"} | [Learn Python 3 the Hard Way: A Very Simple Introduction to the Terrifying Beautiful World of Computer and Code by Zed Shaw](https://a.co/d/88YZsaD) | 
 | ![](pythonfordataanalysis.jpeg){width="75"} | [Python for Data Analysis: Data Wrangling with Pandas, Numpy, and IPython by William McKinney](https://a.co/d/8zGyPe8) | | ![](RforDS.jpeg){width="75"} | [R For Data Science: Import, Tidy, Transform, Visualize, and Model Data by Garrett Grolemund & Hadley Wickham](https://a.co/d/0DoFNnf) |
 
-<br/><br/> 
+<br/><br/><br/>   
 
 <br/><br/><br/><br/>  
 

@@ -7,13 +7,13 @@ knit: (function(input_file, encoding) {
   rmarkdown::render(input_file,
   encoding=encoding,
   output_file=file.path(dirname(input_file), out_dir, 'time_series.html'))})
----
-
+---  
 ---  
 
-<br/><br/>
+<br/>
+<br/>
 
-#### Apple Stocks   
+### Apple Stocks   
 
 
 ![](start.png){width="3200"}  
@@ -26,9 +26,10 @@ knit: (function(input_file, encoding) {
 <br/><br/><br/>
 ![](forecast.png){width="3200"}  
 <br/>
-
-
-<br/><br/><br/><br/>  
+<br/>
+<br/>
+<br/>
+<br/>  
 
 ---  
 

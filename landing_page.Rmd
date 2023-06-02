@@ -2,10 +2,11 @@
 title: "Oscar Cardec"
 image: "docs/RoundPicture.jpg"
 knit: (function(input_file, encoding) {
-  out_dir <- 'html';
-  rmarkdown::render(input_file,
- encoding=encoding,
- output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+  rmarkdown::render(input_file, 
+  encoding=encoding,
+  output_file=file.path(dirname(input_file), 'index.html'))
+  })
+  
 links:
   - label: Merit Page
     url: "https://meritpages.com/ocardec"
@@ -38,7 +39,7 @@ Lead Data Scientist, United States Air Force Veteran and Cyber Intelligence Anal
 
 #### Education  
 
-University of Maryland \| Adelphi, MD - MS in Data Analytic\
+University of Maryland \| Adelphi, MD - MS in Data Analytics\
 American Military University \| Charles Town, WV - BS in Information Technology Management
 
 <br/>
@@ -55,4 +56,4 @@ US Air Force \| Aerospace Maintenance Craftsman \| 2000 - 2007
 <br/><br/><br/><br/><br/>
 
 ------------------------------------------------------------------------
-<p style="text-align:right;">CAO: May'23</p>
+<p style="text-align:right;">CAO: Jun'23</p>

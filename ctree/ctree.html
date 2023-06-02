@@ -12,7 +12,7 @@
 <meta name="author" content="by OC" />
 
 
-<title>Cardiotocograms Classification with CTREE in RStudio</title>
+<title>Cardiotocograms Classification with R CTREE</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -430,10 +430,9 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Cardiotocograms Classification with CTREE
-in RStudio</h1>
+<h1 class="title toc-ignore">Cardiotocograms Classification with R
+CTREE</h1>
 <h4 class="author">by OC</h4>
-<h4 class="date">Oct 2020</h4>
 
 </div>
 
@@ -448,6 +447,7 @@ in RStudio</h1>
 </ul>
 </div>
 
+<hr />
 <div id="preface" class="section level3">
 <h3>Preface</h3>
 <p>Cardiotocograms, also known as CTGs, have been instrumental within
@@ -758,10 +758,8 @@ of the tree, additional pathologic cases are noticed on the left limbs,
 namely node 22, 21, and 15. As an observation, this is an example of
 irregular behaviors potentially hidden from human sight.</p>
 <blockquote>
-<blockquote>
 <p>Irregular behaviors, normally hidden to the naked eye, can easily get
-identified by using algorigthms like the ctree</p>
-</blockquote>
+identified by using algorigthms like the ctree.</p>
 </blockquote>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tree visualization</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model, <span class="at">type=</span><span class="st">&quot;extended&quot;</span>, <span class="at">ep_args =</span> <span class="fu">list</span>(<span class="at">justmin=</span><span class="dv">9</span>), <span class="at">drop_terminal=</span><span class="cn">FALSE</span>, <span class="at">tnex=</span><span class="fl">1.02</span>, </span>

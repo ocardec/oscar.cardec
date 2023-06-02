@@ -54,7 +54,7 @@ The following is an opinionated list of open source and private resources to imp
 -   [The Data Science Hangout](https://posit.co/data-science-hangout/)&nbsp;&nbsp; | &nbsp;&nbsp;[Therebase.Dev](https://www.therebase.dev)&nbsp;&nbsp; | &nbsp;&nbsp;[Data Humans Club](https://www.datahumans.club)&nbsp;&nbsp; | &nbsp;&nbsp;[Gitshowcase](https://www.gitshowcase.com/)
 -   [The Odin Project](https://www.theodinproject.com/home)&nbsp;&nbsp; | &nbsp;&nbsp;[CodeEasy](https://codeeasy.io)&nbsp;&nbsp; | &nbsp;&nbsp;[Cybrary](https://www.cybrary.it/catalog/refined/)&nbsp;&nbsp; | &nbsp;&nbsp;[Codingame](https://www.codingame.com/start)&nbsp;&nbsp; | &nbsp;&nbsp;[OperationCode](https://operationcode.org/code_schools)  
 
-<br/><br/>
+<br/><br/><br/>
 
 >\“There is divine beauty in learning…. To learn means to accept the postulate that life did not begin at my birth. Others have been here before me, and I walk in their footsteps.\” \―Elie Wiesel
 
