@@ -46,7 +46,8 @@ American Military University \| Charles Town, WV - BS in Information Technology 
 
 #### Experience
 
-GovCIO \| Data Scientist - ML Specialist \| 2023 - Present\
+WTI \| Lead Data Scientist - R&D Data Strategist \| Jul 2023 - Present
+GovCIO \| Data Scientist - ML Specialist \| 2023 - Jul 2023\
 Deloitte & Touche, LLC \| Lead Data Scientist \| 2021 - 2023\
 Accenture Federal Services \| Data Science Intern \| 2020 - 2021\
 US Air Force \| Manager, Intelligence Analyst \| 2013 - 2020\
@@ -56,4 +57,4 @@ US Air Force \| Aerospace Maintenance Craftsman \| 2000 - 2007
 <br/><br/><br/><br/><br/>
 
 ------------------------------------------------------------------------
-<p style="text-align:right;">CAO: Jun'23</p>
+<p style="text-align:right;">CAO: Mar '24</p>
