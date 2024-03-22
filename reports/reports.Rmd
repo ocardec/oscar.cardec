@@ -1,5 +1,5 @@
 ---
-title: "My Data Analytics Projects & Reports"
+title: "My Data Analytic Reports"
 author: "by OC"
 knit: (function(input_file, encoding) {
   out_dir <- '../html';
@@ -14,145 +14,45 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 [MIT License Copyright (c) 2023 Cardec Solutions](mit_license.html) 
 
-<br/><br/><br/><br/>
+<br/><br/>
+
+### Projects & Reports  
+
+<br/>
 
 #### Fall 2021
 
----
+- [Classification of Aircraft's Lateral Deviation; Caret Models Comparison](../reports/ClassificationACFTLateralDeviation.pdf)
 
-<p align="right">
-  <a href="../reports/ClassificationACFTLateralDeviation.pdf">
-  <img align="right" border="0" src="../images/aircraft.jpeg" width="160">
-  </a>
-</p>
-- [Classification of Aircraft's Lateral Deviation; Caret Models Comparison](../reports/ClassificationACFTLateralDeviation.pdf)&emsp;
-
-<br/><br/><br/>
-
----
-
-<p align="right">
-  <a href="../reports/UnsupervisedLearningKmeans.pdf">
-  <img align="right" border="0" src="../images/landsat.png" width="160">
-  </a>
-</p>
-- [Landsat Multispectral Scanner Image's Classification with Kmeans Clustering](../reports/UnsupervisedLearningKmeans.pdf)&emsp;
-
-<br/><br/><br/><br/>
+- [Landsat Multispectral Scanner Image's Classification with Kmeans Clustering](../reports/UnsupervisedLearningKmeans.pdf)
 
 #### Spring 2021
 
----
+- [Breast Cancer Dataset Classification with R NeuralNet](../reports/NeuralNetworksR.pdf)
 
-<p align="right">
-  <a href="../reports/NeuralNetworksR.pdf">
-  <img align="right" border="0" src="../images/mamo.jpeg" width="160">
-  </a>
-</p>
-- [Breast Cancer Dataset Classification with R NeuralNet](../reports/NeuralNetworksR.pdf)&emsp;
-
-<br/><br/><br/>
-
----  
-
-<p align="right">
-  <a href="../ctree/ctree.html">
-  <img align="right" border="0" src="../images/ctggraph.jpeg" width="160">
-  </a>
-</p>
-- [Cardiotocograms Interpretation and Classification with R CTREE](../ctree/ctree.html)&emsp;
-
-<br/><br/><br/><br/>
+- [Cardiotocograms Interpretation and Classification with R CTREE](../ctree/ctree.html)
 
 #### Fall 2020
 
----
+- [Logistic Regresion and Default of Credit Card Payments](../reports/LogisticRegression.pdf)
 
-<p align="right">
-  <a href="../reports/LogisticRegression.pdf">
-  <img align="right" border="0" src="../images/creditcard.jpeg" width="160">
-  </a>
-</p>
-
-- [Logistic Regresion and Default of Credit Card Payments](../reports/LogisticRegression.pdf)&emsp;
-
-<br/><br/><br/>
-
----  
-
-<p align="right">
-  <a href="../reports/MultipleLinearRegression.pdf">
-  <img align="right" border="0" src="../images/carvalue.jpeg" width="160">
-  </a>
-</p>
-
-- [Vehicles Valuation with Multilinear Regression](../reports/MultipleLinearRegression.pdf)&emsp;
-
-<br/><br/><br/><br/>
+- [Vehicles Valuation with Multilinear Regression](../reports/MultipleLinearRegression.pdf)
 
 #### Summer 2020
 
----
+- [Association Rules for Credit Approvals with R Apriori](../reports/AssociationApriori.pdf)
 
-<p align="right">
-  <a href="../reports/AssociationApriori.pdf">
-  <img align="right" border="0" src="../images/apriori.png" width="160">
-  </a>
-</p>
-
-- [Association Rules for Credit Approvals with R Apriori](../reports/AssociationApriori.pdf)&emsp;
-
-<br/><br/><br/><br/>
-
-----
-
-<p align="right">
-  <a href="../text_analysis/README.html">
-  <img align="right" border="0" src="../images/cloud.jpeg" width="160">
-  </a>
-</p>
-
-- [NSS Text Analysis with NLTK; Visualized in Tableau](../text_analysis/README.html)&emsp;
-
-<br/><br/><br/>
+- [NSS Text Analysis with NLTK; Visualized in Tableau](../text_analysis/README.html)
 
 #### Spring 2020
 
----
+- [Infographic: Apple Stock Market](time_series.html)
 
-<p align="right">
-  <a href="../html/time_series.html">
-  <img align="right" border="0" src="time_series/start.png" width="160">
-  </a>
-</p>
+- [Infographic: Middle East GDP](../infographic/geospatial_analysis.png)  
 
-- [Infographic: Apple Stock Market](../html/time_series.html)&emsp;
+- [Infographic: Join the Alliance](../infographic/jointhealliance.png)
 
-<br/><br/><br/>
-
----
-
-<p align="right">
-  <a href="../infographic/geospatial_analysis.png">
-  <img align="right" border="0" src="../infographic/geospatial_analysis.png" width="160">
-  </a>
-</p>
-
-- [Infographic: Middle East GDP](../infographic/geospatial_analysis.png)&emsp;
-
-<br/><br/><br/><br/>
-
----
-
-<p align="right">
-  <a href="../infographic/jointhealliance.png">
-  <img align="right" border="0" src="../infographic/jointhealliance.png" width="160">
-  </a>
-</p>
-
-- [Infographic: Join the Alliance](../infographic/jointhealliance.png)&emsp;
-
-<br/><br/><br/><br/><br/><br/> 
+<br/><br/><br/><br/>  <br/><br/> 
 
 ---  
 
